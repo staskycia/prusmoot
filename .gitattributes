@@ -1,0 +1,2 @@
+app/static/img filter=lfs diff=lfs merge=lfs -text
+app/static/pfps filter=lfs diff=lfs merge=lfs -text
