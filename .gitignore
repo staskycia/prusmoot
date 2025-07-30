@@ -1,0 +1,10 @@
+__pycache__/
+*.py[codz]
+*$py.class
+app.db
+.env
+secret_key.txt
+tailwindcss
+tailwind.config.js
+.DS_Store
+lipsum.txt

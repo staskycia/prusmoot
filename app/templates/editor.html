@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create News Post</title>
+
+    <script
+      src="tinymce/tinymce.min.js"
+      referrerpolicy="origin"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tinymce.init({
+        selector: "#content",
+        license_key: "gpl",
+        menubar: false,
+        plugins: "lists link image code",
+        menu: {
+          file: {
+            title: "File",
+            items:
+              "newdocument restoredraft | preview | importword exportpdf exportword | print | deleteallconversations",
+          },
+          edit: {
+            title: "Edit",
+            items:
+              "undo redo | cut copy paste pastetext | selectall | searchreplace",
+          },
+          view: {
+            title: "View",
+            items:
+              "code suggestededits revisionhistory | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments",
+          },
+          insert: {
+            title: "Insert",
+            items:
+              "image link media addcomment pageembed codesample inserttable | math | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime",
+          },
+          format: {
+            title: "Format",
+            items:
+              "bold italic underline strikethrough superscript subscript codeformat | styles blocks fontsize align lineheight | forecolor backcolor | language | removeformat",
+          },
+          tools: {
+            title: "Tools",
+            items:
+              "spellchecker spellcheckerlanguage | a11ycheck code wordcount",
+          },
+          table: {
+            title: "Table",
+            items:
+              "inserttable | cell row column | advtablesort | tableprops deletetable",
+          },
+          help: { title: "Help", items: "help" },
+        },
+        menubar: true,
+        toolbar: [
+          { name: "history", items: ["undo", "redo"] },
+          { name: "styles", items: ["styles"] },
+          { name: "formatting", items: ["bold", "italic", "underline"] },
+          {
+            name: "alignment",
+            items: ["alignleft", "aligncenter", "alignright", "alignjustify"],
+          },
+          { name: "indentation", items: ["outdent", "indent"] },
+        ],
+        height: 400,
+        // editable_root: false,
+        editable_class: "mceEditable",
+      });
+    </script>
+  </head>
+  <body class="bg-gray-100 p-6 text-gray-900">
+    <h1 class="text-2xl font-bold mb-4">Create News Post</h1>
+    <form method="POST" action="/admin/post" class="space-y-4">
+      <textarea id="content" name="content" class="w-full border rounded p-2">
+    <!-- <h1 class="mceEditable">hello</h1> -->
+    <!-- <h1 class="">a! a! a!</h1> -->
+
+        </textarea
+      >
+      <button
+        type="submit"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Submit Post
+      </button>
+    </form>
+  </body>
+</html>

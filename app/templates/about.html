@@ -1,0 +1,170 @@
+{% extends "base.html" %} {% block title %}About Us{% endblock %} {% block
+content %}
+<main class="w-[90%] mx-auto mt-5">
+  <div
+    class="bg-pruslight-300 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] mb-3"
+  >
+    <h1 class="text-4xl">The PrusMoot Team</h1>
+    <p class="">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue
+      pharetra mauris, vitae luctus quam bibendum nec. Duis fermentum
+      condimentum neque nec scelerisque. Aenean pharetra ligula in libero
+      gravida tempus. Quisque nibh dui, tincidunt eu mauris vel, gravida maximus
+      dolor. Aenean justo sem, fringilla id metus volutpat, maximus faucibus
+      diam. Nullam congue mauris ex, eu aliquet odio molestie et. Pellentesque
+      dapibus magna quam, sed condimentum nisl suscipit et. Curabitur blandit
+      lacinia facilisis. Proin lacinia lorem ut tellus viverra auctor.
+    </p>
+  </div>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-0 w-full"
+  >
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/lena.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Lena Hejna</h2>
+        <span class="text-gray-500 max-sm:text-sm"
+          >Co-Head of the Organising Committee</span
+        >
+      </div>
+    </div>
+
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/magda.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Magdalena Czerkas</h2>
+        <span class="text-gray-500 smax-sm:text-sm"
+          >Co-Head of the Organising Committee
+        </span>
+      </div>
+    </div>
+
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/berenika.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Berenika Włodarczyk</h2>
+        <span class="text-gray-500 smax-sm:text-sm">Head of Finance</span>
+      </div>
+    </div>
+
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/martyna.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Martyna Machowska</h2>
+        <span class="text-gray-500 smax-sm:text-sm">Head of Logistics</span>
+      </div>
+    </div>
+
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/tymon.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Tymon Dwojak</h2>
+        <span class="text-gray-500 smax-sm:text-sm">Outreach Specialist</span>
+      </div>
+    </div>
+
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/paulina.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Paulina Czarnecka</h2>
+        <span class="text-gray-500 smax-sm:text-sm">Outreach Specialist</span>
+      </div>
+    </div>
+
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/julia.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Julia Wojtalewicz</h2>
+        <span class="text-gray-500 smax-sm:text-sm">Head of Media</span>
+      </div>
+    </div>
+
+    <div
+      class="mb-3 min-h-[350px] bg-pruslight-300 p-4 rounded-md flex flex-col justify-between mt-2"
+    >
+      <div class="w-56 h-56 rounded-full overflow-hidden relative mx-auto mb-5">
+        <img
+          src="{{ url_for('static', filename='pfps/natalia.png') }}"
+          alt="profile picture"
+          class="h-full w-auto object-cover mb-3"
+        />
+      </div>
+      <div class="text-center mb-3">
+        <h2 class="text-3xl max-sm:text-2xl">Nataliia Soloviova</h2>
+        <span class="text-gray-500 smax-sm:text-sm">Head of Design</span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bg-pruslight-300 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] mt-2 mb-5"
+  >
+    <h1 class="text-4xl">Our school</h1>
+    <p class="">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue
+      pharetra mauris, vitae luctus quam bibendum nec. Duis fermentum
+      condimentum neque nec scelerisque. Aenean pharetra ligula in libero
+      gravida tempus. Quisque nibh dui, tincidunt eu mauris vel, gravida maximus
+      dolor. Aenean justo sem, fringilla id metus volutpat, maximus faucibus
+      diam. Nullam congue mauris ex, eu aliquet odio molestie et. Pellentesque
+      dapibus magna quam, sed condimentum nisl suscipit et. Curabitur blandit
+      lacinia facilisis. Proin lacinia lorem ut tellus viverra auctor.
+    </p>
+  </div>
+</main>
+{% endblock %}

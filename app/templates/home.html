@@ -1,0 +1,87 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<div
+  class="h-screen flex flex-col justify-center text-pruslight-50 fixed top-0 left-0 w-full realtive coverbg"
+>
+  <!-- max-md:different cover ^^^ -->
+
+  <!-- bg-cover text-white -->
+  <div class="absolute inset-0 bg-black/50 z-0 max-md:bg-black/20"></div>
+  <div class="relative z-10">
+    <div class="text-center">
+      <h1 class="mx-auto leading-[1.1] ~sm/lg:~text-6xl/9xl">
+        Lorem
+        <span
+          class="relative text-prusdark-400 whitespace-nowrap stroke-prusdark-100"
+        >
+          <svg
+            class="absolute top-[1.1rem] left-[-2.5rem] w-[140%] z-[-1]"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.dev/svgjs"
+            viewBox="0 0 800 400"
+          >
+            <path
+              d="M21.984777450561523,282.8259582519531C85.03125985463461,267.1390380859375,364.70665073394775,187.06104532877603,400.263671875,188.70443725585938C435.82069301605225,190.34782918294272,188.56494140625,280.88376871744794,235.326904296875,292.6863098144531C282.0888671875,304.4888509114583,606.5840250651041,265.0474548339844,680.83544921875,259.5196838378906"
+              fill="none"
+              stroke-width="12"
+              stroke-linecap="round"
+              transform="matrix(1,0,0,1,48.58989906311035,-41.778953552246094)"
+              stroke-opacity="1"
+            ></path>
+            <defs></defs>
+          </svg>
+          <span class="relaitive">ipsum</span>
+        </span>
+        <br />
+        dolor sit amet
+      </h1>
+    </div>
+    <p
+      class="w-[35rem] mx-auto mt-3 ~text-[0.75rem]/[1rem] max-md:w-[30rem] max-sm:w-[20rem]"
+    >
+      Mauris fermentum vehicula felis, vel bibendum urna eleifend vitae. liquam
+      tristique lacus ac neque fermentum molestie. Nullam quis consequat nulla
+    </p>
+    <div class="flex row justify-center gap-5 mt-12">
+      <a
+        href="https://mymoot.org/mootDetails?id=36"
+        target="_blank"
+        class="~px-4/7 ~py-1.5/2.5 ~text-xs/base bg-prusdark text-white rounded-full flex items-center duration-300 hover:bg-prusdark-400 active:bg-prusdark-500"
+        >Register now</a
+      >
+      <a
+        href="edition_2025.html"
+        class="~px-4/7 ~py-2/2.5 ~text-xs/base bg-prusdark-400 rounded-full flex items-center duration-300 hover:bg-prusdark-500 active:text-prusdark-600"
+        >Learn more</a
+      >
+    </div>
+  </div>
+  <div class="text-center mt-5 absolute bottom-0 w-full py-4">
+    <div
+      class="w-full flex flex-row flex-nowrap items-center justify-center mt-3 opacity-55"
+    >
+      <object
+        data="cms_logo.svg"
+        type="image/svg+xml"
+        class="~h-16/24 w-auto"
+      ></object>
+    </div>
+  </div>
+</div>
+<style>
+  .coverbg {
+    background-image: url("{{  url_for('static', filename='img/cover.jpg') }}");
+    background-size: cover;
+  }
+
+  @media (width < 48rem) {
+    .coverbg {
+      background-image: url("{{  url_for('static', filename='img/cover2.png') }}");
+    }
+  }
+</style>
+
+{% endblock %}

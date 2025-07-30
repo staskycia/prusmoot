@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block title %}Files{% endblock %}
+{% block content %}
+<main class="w-[90%] mx-auto mt-5">
+  <div
+    class="bg-pruslight-300 rounded-md p-6 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.05)]"
+  >
+    <h1 class="text-4xl mb-2">Files</h1>
+    <p class="mb-4 text-gray-700">
+      Only files related to the current edition are shown here. For archive
+      documents, please see the <i>past editions</i> tab.
+    </p>
+
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+    >
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/folder.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>documents</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/folder.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>photos</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>case_file.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/docx.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.docx</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/jpg.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>image.jpg</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+      <div
+        onclick="document.getElementById('popup').classList.remove('hidden')"
+        class="cursor-pointer text-center hover:text-prusdark duration-200"
+      >
+        <img src="{{ url_for('static', filename='file_icons/pdf.svg') }}" class="w-16 mx-auto mb-2" />
+        <span>example.pdf</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div
+  id="popup"
+  class="hidden w-[90%] max-w-[35rem] h-[20rem] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-md glass text-center flex flex-col items-center justify-evenly"
+>
+  <div class="flex justify-between items-center w-full px-6">
+    <h2 class="text-2xl">example.pdf</h2>
+    <span
+      class="cursor-pointer"
+      onclick="this.closest('#popup').classList.add('hidden')"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        class="w-7 stroke-black hover:stroke-prusdark duration-150"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </span>
+  </div>
+  <div class="px-6 text-left overflow-y-auto max-h-[60%]">
+    <p>
+      Lorem ipsum dolor sit amet. Mauris fermentum vehicula felis, vel
+      bibendum urna eleifend vitae. Aliquam tristique lacus ac neque
+      fermentum molestie. Nullam quis consequat nulla.
+    </p>
+  </div>
+  <div>
+    <a
+      href="#"
+      target="_blank"
+      class="px-6 py-2.5 bg-black text-white rounded-full hover:bg-prusdark-400 active:bg-prusdark-500 duration-300"
+      >Download</a
+    >
+  </div>
+</div>
+{% endblock content %}
