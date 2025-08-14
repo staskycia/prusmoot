@@ -1,0 +1,154 @@
+{% extends "panel/base.html" %} {% block title%} Files {% endblock %} {% block
+content%}
+<div class="flex flex-row flex-wrap gap-[2%] justify-center">
+  <div
+    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">Upload a file</h1>
+    </div>
+
+    <form
+      action="{{url_for('panel.files')}}"
+      method="POST"
+      enctype="multipart/form-data"
+      class="w-[80%]"
+    >
+      <input class="hidden" type="text" name="field" value="upload" />
+      <label for="name_en">English name</label><br />
+      <input
+        required
+        type="text"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="name_en"
+      /><br />
+
+      <label for="name_pl">Polish name</label><br />
+      <input
+        required
+        type="text"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="name_pl"
+      /><br />
+
+      <label for="description_en">English description</label><br />
+      <textarea
+        required
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="description_en"
+      ></textarea
+      ><br />
+
+      <label for="description_pl">Polish description</label><br />
+      <textarea
+        required
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="description_pl"
+      ></textarea
+      ><br />
+
+      <label for="name_pl">File</label><br />
+      <input
+        required
+        type="file"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="file"
+      /><br />
+
+      <label for="category">Category</label><br />
+      <select
+        name="category"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+      >
+      {% for category in categories %}
+        <option value="{{category}}">{{category}}</option>
+      {% endfor %}
+        </select
+      ><br />
+
+      <input
+        type="submit"
+        class="mb-4 bg-green-500 px-14 py-2 rounded-full text-white duration-200 hover:bg-green-600 active:bg-green-700"
+        value="Upload"
+      />
+    </form>
+  </div>
+
+  <div
+    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">All files</h1>
+    </div>
+
+    {% if posts %}
+    <table class="min-w-[90%] table-auto">
+      <thead class="bg-gray-100 dark:bg-gray-500">
+        <tr>
+          <th class="px-4 py-2 text-center border-b border-gray-300">
+            English title
+          </th>
+          <th class="px-4 py-2 text-right border-b border-gray-300">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %}
+        <tr class="even:bg-gray-100 dark:even:bg-gray-500">
+          <td class="px-4 py-2">{{post.title_en}}</td>
+          <td class="px-4 py-2 flex flex-row justify-end gap-3 items-center">
+            <a
+              href="{{url_for('panel.edit_post', id=post.id)}}"
+              target="_blank"
+              class="text-blue-500 hover:text-blue-600 active:text-blue-700"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"
+                />
+              </svg>
+            </a>
+            <form
+              action="{{url_for('panel.delete_post')}}"
+              class=""
+              method="post"
+            >
+              <input type="text" class="hidden" name="id" value="{{post.id}}" />
+              <button
+                type="submit"
+                onclick="return confirm('Are you sure you want to delete this post ({{post.title_en}})?')"
+                class="text-red-500 hover:text-red-600 active:text-red-700"
+              >
+                <input class="hidden" value="{{post.id}}" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                  />
+                </svg>
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %} No files to show! {% endif %}
+  </div>
+</div>
+{% endblock %}

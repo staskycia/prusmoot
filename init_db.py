@@ -14,5 +14,14 @@ app = create_app()
 
 from app.extensions import db
 
+from app.models import User, Post
+
+from werkzeug.security import generate_password_hash
+admin = User(email = "stanislaw.stask@gmail.com", first_name="Staś", last_name="Kycia", password=generate_password_hash("admin"), is_admin=True)
+
 with app.app_context():
     db.create_all()
+    
+    db.session.add(admin)
+    
+    db.session.commit()

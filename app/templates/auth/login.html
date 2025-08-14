@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FileDrop Panel Login</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+  </head>
+  <body class="bg-pruslight-300 m-0 p-0 dark:bg-slate-900">
+    {% with messages = get_flashed_messages(with_categories=True) %} {% if
+    messages %}
+    <div class="text-center text-xl text-bold w-[20%] mx-auto">
+      {% for cattegory, message in messages %}
+      <div
+        class="py-4 {% if cattegory == 'error' %} bg-red-200 text-red-700 {% elif cattegory == 'success' %} bg-green-200 text-green-700 {% elif cattegory == 'warning' %} bg-yellow-200 text-yellow-700 {% endif %} rounded-md mb-3"
+      >
+        {{message}}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+
+    <div
+      class="flex justify-center items-center min-h-screen flex-col content-evenly text-center"
+    >
+      <p class="p-4 text-5xl dark:text-white">
+        PrusMoot
+        <span
+          class="font-bold bg-gradient-to-r from-prusdark-400 to-prusdark-600 inline-block text-transparent bg-clip-text py-2"
+          >Panel</span
+        >
+      </p>
+
+      <form method="POST" action="{{url_for('auth.login')}}">
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Email"
+          class="text-prusdark-500 placeholder-prusdark-500 px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-prusdark-50 hover:bg-prusdark-100 focus:bg-prusdark-200 focus:outline-none border-[2px] border-solid border-prusdark-500 max-sm:w-[70%] max-sm:h-[40%] dark:bg-prusdark-800 dark:hover:bg-prusdark-900 dark:focus:bg-prusdark-800 dark:placeholder-white dark:text-white"
+        /><br />
+        <input
+          type="password"
+          name="password"
+          required
+          placeholder="Password"
+          class="text-prusdark-500 placeholder-prusdark-500 px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-prusdark-50 hover:bg-prusdark-100 focus:bg-prusdark-200 focus:outline-none border-[2px] border-solid border-prusdark-500 max-sm:w-[70%] max-sm:h-[40%] dark:bg-prusdark-800 dark:hover:bg-prusdark-900 dark:focus:bg-prusdark-800 dark:placeholder-white dark:text-white"
+        /><br />
+        <input
+          type="submit"
+          class="bg-prusdark-500 px-14 py-2 rounded-full text-white duration-200 hover:bg-prusdark-600 active:bg-prusdark-700"
+          value="Login"
+        />
+      </form>
+    </div>
+  </body>
+</html>

@@ -10,8 +10,21 @@
     />
   </head>
   <body class="bg-white m-0 p-0">
-    <nav
-      class="flex flex-row justify-between px-20 py-2 sticky top-0 left-0 z-40 w-full bg-pruslight-300 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] max-lg:flex-col max-lg:items-center max-h-screen max-lg:hidden"
+    <nav class="sticky top-0 left-0 z-40 w-full  max-lg:hidden">
+      {% if current_user.is_authenticated %}
+      <div class="bg-prusdark-300 py-4 px-6 flex flex-row justify-start gap-7">
+        <span class="">Edit:</span>
+        <a href="" class="">Files</a>
+        <a href="{{url_for('panel.posts')}}" class="">News</a>
+        <a href="{{url_for('panel.tags')}}" class="">Tags</a>
+        <a href="{{url_for('panel.home')}}" class="">Links</a>
+        {% if current_user.is_admin %}
+          <a href="{{url_for('admin.index')}}" class="ml-10">Admin panel</a>
+        {% endif %}
+      </div>
+      {% endif %}
+    <div
+      class="flex flex-row justify-between px-20 py-2 bg-pruslight-300 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] max-lg:flex-col max-lg:items-center max-h-screen"
     >
       <a href="{{ url_for('main.home') }}" class="">
         <div class="flex flex-row gap-3">
@@ -66,9 +79,7 @@
           </div>
         </div>
         <!-- Mobile navbar only -->
-        <span
-          href="news.html"
-          class="px-9 pt-5 text-center text-gray-500 lg:hidden"
+        <span class="px-9 pt-5 text-center text-gray-500 lg:hidden"
           >Editions:</span
         >
         <a
@@ -88,11 +99,12 @@
           >Abous&nbsp;Us</a
         >
         <a
-          href="guide.html"
+          href="{{url_for('main.guide')}}"
           class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center"
           >Moot&nbsp;Guide</a
         >
       </div>
+    </div>
     </nav>
     <div
       id="showNav"

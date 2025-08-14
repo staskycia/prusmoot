@@ -9,6 +9,7 @@ class Config:
     with open(os.path.join(basedir, "secret_key.txt")) as f:
         SECRET_KEY = f.read()
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "app.db")
+    UPLOAD_FOLDER = "uploaded_files"
     SQLALCHEMY_TRACK_MODIFICATIONS = os.getenv("SQLALCHEMY_TRACK_MODIFICATIONS", "False").lower() == "true"
     MAIL_SERVER = os.getenv("MAIL_SERVER")
     MAIL_PORT = int(os.getenv("MAIL_PORT"))
@@ -18,3 +19,4 @@ class Config:
     MAIL_USE_TLS = os.getenv("MAIL_USE_TLS", "False").lower() == "true"
     MAIL_USE_SSL = os.getenv("MAIL_USE_SSL", "False").lower() == "true"
     MAIL_SUPPRESS_SEND =  os.getenv("MAIL_SUPPRESS_SEND", "False").lower() == "true"
+    # FLASK_ADMIN_SWATCH = os.getenv("FLASK_ADMIN_SWATCH")

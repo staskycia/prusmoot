@@ -1,0 +1,86 @@
+{% extends "panel/base.html" %} {% block title%} Links {% endblock %} {%
+block content%}
+<div class="flex flex-row flex-wrap gap-[2%] justify-center">
+  <div
+    class="w-[48%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">Add link</h1>
+    </div>
+    <form method="POST" action="{{url_for('panel.home')}}">
+      <input class="hidden" type="text" name="field" value="add" />
+      <label for="alias">Alias</label><br />
+      <input
+        type="text"
+        class="text-blue-500 placeholder-blue-500 px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 max-sm:w-[70%] max-sm:h-[40%] dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        placeholder="our-site"
+        name="alias"
+      /><br />
+      <label for="target">Target</label><br />
+      <input
+        type="text"
+        class="text-blue-500 placeholder-blue-500 px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 max-sm:w-[70%] max-sm:h-[40%] dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        placeholder="https://prusmoot.org"
+        name="target"
+      /><br />
+      <input
+        type="submit"
+        class="mb-4 px-14 py-2 rounded-full text-white duration-200 {% if sharing_enabled %}bg-red-500 hover:bg-red-600 active:bg-red-700{% else %}bg-green-500 hover:bg-green-600 active:bg-green-700{% endif %}"
+        value="Add"
+      />
+    </form>
+  </div>
+
+  <div
+    class="w-[48%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">Delete link</h1>
+    </div>
+    <form method="POST" action="{{url_for('panel.home')}}">
+      <input class="hidden" type="text" name="field" value="delete" />
+            <label for="alias">Alias</label><br />
+      <input
+        type="text"
+        class="text-blue-500 placeholder-blue-500 px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 max-sm:w-[70%] max-sm:h-[40%] dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        placeholder="our-site"
+        name="alias"
+      /><br />
+      <input
+        type="submit"
+        class="mb-4 bg-red-500 px-14 py-2 rounded-full text-white duration-200 hover:bg-red-600 active:bg-red-700"
+        value="Delete"
+      />
+    </form>
+  </div>
+
+  <div
+    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">All links</h1>
+    </div>
+
+    {% if links %}
+    <table class="min-w-[90%] table-auto">
+      <thead class="bg-gray-100 dark:bg-gray-500">
+        <tr>
+          <th class="px-4 py-2 text-center border-b border-gray-300">Alias</th>
+          <th class="px-4 py-2 text-center border-b border-gray-300">Target</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for link in links %}
+        <tr class="even:bg-gray-100 dark:even:bg-gray-500">
+          <td class="px-4 py-2 border-b border-gray-200">{{ link.alias }}</td>
+          <td class="px-4 py-2 border-b border-gray-200"><a href="{{ link.target }}" target="_blank">{{ link.target }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    No links to show!
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

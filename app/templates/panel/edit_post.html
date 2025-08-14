@@ -1,0 +1,220 @@
+{% extends "panel/base.html" %} {% block title%} Edit Post {% endblock %} {%
+block content%}
+<script
+  src="{{url_for('static', filename='tinymce/tinymce.min.js')}}"
+  referrerpolicy="origin"
+  crossorigin="anonymous"
+></script>
+<script>
+  tinymce.init({
+    selector: "#content_en",
+    license_key: "gpl",
+    menubar: false,
+    plugins: "lists link image code",
+    menu: {
+      file: {
+        title: "File",
+        items:
+          "newdocument restoredraft | preview | importword exportpdf exportword | print | deleteallconversations",
+      },
+      edit: {
+        title: "Edit",
+        items:
+          "undo redo | cut copy paste pastetext | selectall | searchreplace",
+      },
+      view: {
+        title: "View",
+        items:
+          "code suggestededits revisionhistory | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments",
+      },
+      insert: {
+        title: "Insert",
+        items:
+          "image link media addcomment pageembed codesample inserttable | math | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime",
+      },
+      format: {
+        title: "Format",
+        items:
+          "bold italic underline strikethrough superscript subscript codeformat | styles blocks fontsize align lineheight | forecolor backcolor | language | removeformat",
+      },
+      tools: {
+        title: "Tools",
+        items: "spellchecker spellcheckerlanguage | a11ycheck code wordcount",
+      },
+      table: {
+        title: "Table",
+        items:
+          "inserttable | cell row column | advtablesort | tableprops deletetable",
+      },
+      help: { title: "Help", items: "help" },
+    },
+    menubar: true,
+    toolbar: [
+      { name: "history", items: ["undo", "redo"] },
+      { name: "styles", items: ["styles"] },
+      { name: "formatting", items: ["bold", "italic", "underline"] },
+      {
+        name: "alignment",
+        items: ["alignleft", "aligncenter", "alignright", "alignjustify"],
+      },
+      { name: "indentation", items: ["outdent", "indent"] },
+    ],
+    height: 400,
+    // editable_root: false,
+    editable_class: "mceEditable",
+  });
+</script>
+<script>
+  tinymce.init({
+    selector: "#content_pl",
+    license_key: "gpl",
+    menubar: false,
+    plugins: "lists link image code",
+    menu: {
+      file: {
+        title: "File",
+        items:
+          "newdocument restoredraft | preview | importword exportpdf exportword | print | deleteallconversations",
+      },
+      edit: {
+        title: "Edit",
+        items:
+          "undo redo | cut copy paste pastetext | selectall | searchreplace",
+      },
+      view: {
+        title: "View",
+        items:
+          "code suggestededits revisionhistory | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments",
+      },
+      insert: {
+        title: "Insert",
+        items:
+          "image link media addcomment pageembed codesample inserttable | math | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime",
+      },
+      format: {
+        title: "Format",
+        items:
+          "bold italic underline strikethrough superscript subscript codeformat | styles blocks fontsize align lineheight | forecolor backcolor | language | removeformat",
+      },
+      tools: {
+        title: "Tools",
+        items: "spellchecker spellcheckerlanguage | a11ycheck code wordcount",
+      },
+      table: {
+        title: "Table",
+        items:
+          "inserttable | cell row column | advtablesort | tableprops deletetable",
+      },
+      help: { title: "Help", items: "help" },
+    },
+    menubar: true,
+    toolbar: [
+      { name: "history", items: ["undo", "redo"] },
+      { name: "styles", items: ["styles"] },
+      { name: "formatting", items: ["bold", "italic", "underline"] },
+      {
+        name: "alignment",
+        items: ["alignleft", "aligncenter", "alignright", "alignjustify"],
+      },
+      { name: "indentation", items: ["outdent", "indent"] },
+    ],
+    height: 400,
+    // editable_root: false,
+    editable_class: "mceEditable",
+  });
+</script>
+<script>
+  document.querySelector("form").addEventListener("submit", function () {
+    tinymce.triggerSave(); // saves all editors
+  });
+</script>
+<div class="flex flex-row flex-wrap gap-[2%] justify-center">
+  <div
+    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">Edit</h1>
+    </div>
+
+    <form action="" method="POST" class="w-[80%]">
+      <input class="hidden" type="text" name="field" value="create" />
+      <label for="title_en">English title</label><br />
+      <input
+        required
+        type="text"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="title_en"
+        value="{{post.title_en}}"
+      /><br />
+
+      <label for="title_pl">Polish title</label><br />
+      <input
+        required
+        type="text"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="title_pl"
+        value="{{post.title_pl}}"
+      /><br />
+
+      <span class="text-red-400"
+        >Please do not include <i>title, author, date, etc.</i> bellow. They
+        will be generetde by the system!</span
+      ><br />
+
+      <label for="content_en">English content</label><br />
+      <textarea
+        id="content_en"
+        name="content_en"
+        class="w-[70%] border rounded p-2"
+      >
+{{post.content_en}}</textarea
+      ><br />
+
+      <label for="content_en">Polish content</label><br />
+      <textarea
+        id="content_pl"
+        name="content_pl"
+        class="w-[70%] border rounded p-2"
+      >
+{{post.content_pl}}</textarea
+      ><br />
+
+      <span>Tags</span><br />
+      <div class="flex flex-row gap-2 justify-center">
+        {% for tag in tags %}
+        <div class="flex items-center gap-2 mb-2">
+          <input
+            type="checkbox"
+            id="tag_{{tag.id}}"
+            name="tag_checkbox"
+            value="{{tag.id}}"
+            {%
+            if
+            tag
+            in
+            post.tags
+            %}
+            checked
+            {%
+            endif
+            %}
+          />
+          <label
+            for="tag_{{tag.id}}"
+            style="background-color: {{tag.color}}"
+            class="py-2 px-3 rounded-full"
+            >{{tag.name_en}} ({{tag.name_pl}})</label
+          >
+        </div>
+        {% endfor %}
+      </div>
+
+      <input
+        type="submit"
+        class="mb-4 bg-green-500 px-14 py-2 rounded-full text-white duration-200 hover:bg-green-600 active:bg-green-700"
+        value="Publish changes"
+      />
+    </form>
+  </div>
+</div>
+{% endblock %}

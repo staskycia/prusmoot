@@ -1,0 +1,283 @@
+{% extends "panel/base.html" %} {% block title%} Posts {% endblock %} {%
+block content%}
+<script
+  src="{{url_for('static', filename='tinymce/tinymce.min.js')}}"
+  referrerpolicy="origin"
+  crossorigin="anonymous"
+></script>
+<script>
+  tinymce.init({
+    selector: "#content_en",
+    license_key: "gpl",
+    menubar: false,
+    plugins: "lists link image code",
+    menu: {
+      file: {
+        title: "File",
+        items:
+          "newdocument restoredraft | preview | importword exportpdf exportword | print | deleteallconversations",
+      },
+      edit: {
+        title: "Edit",
+        items:
+          "undo redo | cut copy paste pastetext | selectall | searchreplace",
+      },
+      view: {
+        title: "View",
+        items:
+          "code suggestededits revisionhistory | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments",
+      },
+      insert: {
+        title: "Insert",
+        items:
+          "image link media addcomment pageembed codesample inserttable | math | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime",
+      },
+      format: {
+        title: "Format",
+        items:
+          "bold italic underline strikethrough superscript subscript codeformat | styles blocks fontsize align lineheight | forecolor backcolor | language | removeformat",
+      },
+      tools: {
+        title: "Tools",
+        items: "spellchecker spellcheckerlanguage | a11ycheck code wordcount",
+      },
+      table: {
+        title: "Table",
+        items:
+          "inserttable | cell row column | advtablesort | tableprops deletetable",
+      },
+      help: { title: "Help", items: "help" },
+    },
+    menubar: true,
+    toolbar: [
+      { name: "history", items: ["undo", "redo"] },
+      { name: "styles", items: ["styles"] },
+      { name: "formatting", items: ["bold", "italic", "underline"] },
+      {
+        name: "alignment",
+        items: ["alignleft", "aligncenter", "alignright", "alignjustify"],
+      },
+      { name: "indentation", items: ["outdent", "indent"] },
+    ],
+    height: 400,
+    // editable_root: false,
+    editable_class: "mceEditable",
+  });
+</script>
+<script>
+  tinymce.init({
+    selector: "#content_pl",
+    license_key: "gpl",
+    menubar: false,
+    plugins: "lists link image code",
+    menu: {
+      file: {
+        title: "File",
+        items:
+          "newdocument restoredraft | preview | importword exportpdf exportword | print | deleteallconversations",
+      },
+      edit: {
+        title: "Edit",
+        items:
+          "undo redo | cut copy paste pastetext | selectall | searchreplace",
+      },
+      view: {
+        title: "View",
+        items:
+          "code suggestededits revisionhistory | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments",
+      },
+      insert: {
+        title: "Insert",
+        items:
+          "image link media addcomment pageembed codesample inserttable | math | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime",
+      },
+      format: {
+        title: "Format",
+        items:
+          "bold italic underline strikethrough superscript subscript codeformat | styles blocks fontsize align lineheight | forecolor backcolor | language | removeformat",
+      },
+      tools: {
+        title: "Tools",
+        items: "spellchecker spellcheckerlanguage | a11ycheck code wordcount",
+      },
+      table: {
+        title: "Table",
+        items:
+          "inserttable | cell row column | advtablesort | tableprops deletetable",
+      },
+      help: { title: "Help", items: "help" },
+    },
+    menubar: true,
+    toolbar: [
+      { name: "history", items: ["undo", "redo"] },
+      { name: "styles", items: ["styles"] },
+      { name: "formatting", items: ["bold", "italic", "underline"] },
+      {
+        name: "alignment",
+        items: ["alignleft", "aligncenter", "alignright", "alignjustify"],
+      },
+      { name: "indentation", items: ["outdent", "indent"] },
+    ],
+    height: 400,
+    // editable_root: false,
+    editable_class: "mceEditable",
+  });
+</script>
+<script>
+  document.querySelector("form").addEventListener("submit", function () {
+    tinymce.triggerSave(); // saves all editors
+  });
+</script>
+<div class="flex flex-row flex-wrap gap-[2%] justify-center">
+  <div
+    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">Publish a post</h1>
+    </div>
+
+    <form action="{{url_for('panel.posts')}}" method="POST" class="w-[80%]">
+      <input class="hidden" type="text" name="field" value="create" />
+      <label for="title_en">English title</label><br />
+      <input
+        required
+        type="text"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="title_en"
+      /><br />
+
+      <label for="title_pl">Polish title</label><br />
+      <input
+        required
+        type="text"
+        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        name="title_pl"
+      /><br />
+
+      <span class="text-red-400"
+        >Please do not include <i>title, author, date, etc.</i> bellow. They
+        will be generetde by the system!</span
+      ><br />
+
+      <label for="content_en">English content</label><br />
+      <textarea
+        id="content_en"
+        name="content_en"
+        class="w-[70%] border rounded p-2"
+      ></textarea
+      ><br />
+
+      <label for="content_en">Polish content</label><br />
+      <textarea
+        id="content_pl"
+        name="content_pl"
+        class="w-[70%] border rounded p-2"
+      ></textarea
+      ><br />
+
+      <span>Tags</span><br />
+      <div class="flex flex-row gap-2 justify-center">
+        {% for tag in tags %}
+        <div class="flex items-center gap-2 mb-2">
+          <input
+            type="checkbox"
+            id="tag_{{tag.id}}"
+            name="tag_checkbox"
+            value="{{tag.id}}"
+          />
+          <label
+            for="tag_{{tag.id}}"
+            style="background-color: {{tag.color}}"
+            class="py-2 px-3 rounded-full"
+            >{{tag.name_en}} ({{tag.name_pl}})</label
+          >
+        </div>
+        {% endfor %}
+      </div>
+
+      <input
+        type="submit"
+        class="mb-4 bg-green-500 px-14 py-2 rounded-full text-white duration-200 hover:bg-green-600 active:bg-green-700"
+        value="Publish"
+      />
+    </form>
+  </div>
+
+  <div
+    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+  >
+    <div>
+      <h1 class="text-2xl mt-4">All posts</h1>
+    </div>
+
+    {% if posts %}
+    <table class="min-w-[90%] table-auto">
+      <thead class="bg-gray-100 dark:bg-gray-500">
+        <tr>
+          <th class="px-4 py-2 text-center border-b border-gray-300">
+            English title
+          </th>
+          <th class="px-4 py-2 text-right border-b border-gray-300">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %}
+        <tr class="even:bg-gray-100 dark:even:bg-gray-500">
+          <td class="px-4 py-2">{{post.title_en}}</td>
+          <td class="px-4 py-2 flex flex-row justify-end gap-3 items-center">
+            <a
+              href="{{url_for('panel.edit_post', id=post.id)}}"
+              target="_blank"
+              class="text-blue-500 hover:text-blue-600 active:text-blue-700"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"
+                />
+              </svg>
+            </a>
+            <form
+              action="{{url_for('panel.delete_post')}}"
+              class=""
+              method="post"
+            >
+              <input type="text" class="hidden" name="id" value="{{post.id}}" />
+              <button
+                type="submit"
+                onclick="return confirm('Are you sure you want to delete this post ({{post.title_en}})?')"
+                class="text-red-500 hover:text-red-600 active:text-red-700"
+              >
+                <input class="hidden" value="{{post.id}}" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                  />
+                </svg>
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %} No posts to show! {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -2,7 +2,9 @@ from flask import Flask
 
 from config import Config
 
-from app.extensions import db, login_manager, mail
+from app.extensions import db, login_manager, mail, admin
+
+from app.admin_views import init_admin_views
     
 def create_app(config_class = Config):
     app = Flask(__name__)
@@ -13,7 +15,20 @@ def create_app(config_class = Config):
     
     mail.init_app(app)
     
+    admin.init_app(app)
+    
+    init_admin_views()
+    
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
+    
+    from app.auth import bp as auth_bp
+    app.register_blueprint(auth_bp, url_prefix="/auth")
+    
+    from app.panel import bp as panel_bp
+    app.register_blueprint(panel_bp, url_prefix="/panel")
+    
+    from app.link import bp as link_bp
+    app.register_blueprint(link_bp, url_prefix="/link")
     
     return app
