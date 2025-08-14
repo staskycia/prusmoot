@@ -1,3 +1,4 @@
+beautifulsoup4==4.13.4
 blinker==1.9.0
 click==8.2.1
 Flask==3.1.1
@@ -7,9 +8,11 @@ Flask-Mail==0.10.0
 Flask-SQLAlchemy==3.1.1
 itsdangerous==2.2.0
 Jinja2==3.1.6
+lxml==6.0.0
 MarkupSafe==3.0.2
 PyJWT==2.10.1
 python-dotenv==1.1.1
+soupsieve==2.7
 SQLAlchemy==2.0.41
 typing_extensions==4.14.1
 validators==0.35.0
