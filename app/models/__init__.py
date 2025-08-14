@@ -10,7 +10,7 @@ class User(UserMixin, db.Model):
     first_name = db.Column(db.String(20))
     last_name = db.Column(db.String(20))
     email = db.Column(db.String(120), unique=True, nullable=False, index=True)
-    profile_picture = db.Column(db.String(50), nullable=False, default="empty.png")
+    profile_picture = db.Column(db.String(50), nullable=False, default="empty")
     
     is_admin = db.Column(db.Boolean, nullable=False, default=False)
     
