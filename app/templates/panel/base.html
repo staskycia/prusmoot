@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,10 +16,10 @@
       type="text/css"
     />
   </head>
-  <body class="bg-gray-100 m-0 p-0 dark:bg-slate-900 dark:text-white">
+  <body class="m-0 bg-gray-100 p-0 dark:bg-slate-900 dark:text-white">
     <button
       id="menuToggle"
-      class="sm:hidden fixed top-4 right-4 z-50 p-2 rounded bg-blue-500 text-white"
+      class="fixed right-4 top-4 z-50 rounded bg-blue-500 p-2 text-white sm:hidden"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -40,26 +40,26 @@
 
     <div
       id="sidebar"
-      class="bg-slate-50 h-screen w-[24%] m-0 p-0 fixed overflow-auto shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] rounded-md dark:bg-slate-800 w-full sm:w-[24%] hidden sm:block"
+      class="fixed m-0 hidden h-screen w-[24%] overflow-auto rounded-md bg-slate-50 p-0 shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] sm:block sm:w-[24%] dark:bg-slate-800"
     >
-      <p class="pb-4 px-4 my-[1%] text-3xl dark:text-white mt-4">
+      <p class="my-[1%] mt-4 px-4 pb-4 text-3xl dark:text-white">
         PrusMoot
         <span
-          class="font-bold bg-gradient-to-r from-blue-400 to-blue-600 inline-block text-transparent bg-clip-text"
+          class="inline-block bg-gradient-to-r from-prusdark-400 to-prusdark-600 bg-clip-text font-bold text-transparent"
           >Panel</span
         >
       </p>
       <div class="flex flex-col items-center">
         <a
           href="{{ url_for('main.home') }}"
-          class="px-4 py-3 w-[95%] mb-2 rounded-md duration-200 hover:bg-gray-300 flex items-center dark:hover:bg-slate-700"
+          class="mb-2 flex w-[95%] items-center rounded-md px-4 py-3 duration-200 hover:bg-gray-300 dark:hover:bg-slate-700"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mr-3"
+            class="mr-3 size-6"
           >
             <path
               stroke-linecap="round"
@@ -73,14 +73,14 @@
 
         <a
           href="{{ url_for('panel.home') }}"
-          class="{% if request.path == '/panel/' or request.path == '/panel/links' %} bg-gray-200 dark:bg-slate-600 {% endif %} px-4 py-3 w-[95%] mb-2 rounded-md duration-200 hover:bg-gray-300 flex items-center dark:hover:bg-slate-700"
+          class="{% if request.path == '/panel/' or request.path == '/panel/links' %} navbar-link-selected {% endif %} mb-2 flex w-[95%] items-center rounded-md px-4 py-3 duration-200 hover:bg-gray-300 dark:hover:bg-slate-700"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mr-3"
+            class="mr-3 size-6"
           >
             <path
               stroke-linecap="round"
@@ -93,14 +93,14 @@
 
         <a
           href="{{ url_for('panel.posts') }}"
-          class="{% if request.path == '/panel/posts' %} bg-gray-200 dark:bg-slate-600 {% endif %} px-4 py-3 w-[95%] mb-2 rounded-md duration-200 hover:bg-gray-300 flex items-center dark:hover:bg-slate-700"
+          class="{% if request.path == '/panel/posts' %} navbar-link-selected {% endif %} mb-2 flex w-[95%] items-center rounded-md px-4 py-3 duration-200 hover:bg-gray-300 dark:hover:bg-slate-700"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mr-3"
+            class="mr-3 size-6"
           >
             <path
               stroke-linecap="round"
@@ -114,14 +114,14 @@
 
         <a
           href="{{ url_for('panel.tags') }}"
-          class="{% if request.path == '/panel/tags' %} bg-gray-200 dark:bg-slate-600 {% endif %} px-4 py-3 w-[95%] mb-2 rounded-md duration-200 hover:bg-gray-300 flex items-center dark:hover:bg-slate-700"
+          class="{% if request.path == '/panel/tags' %} navbar-link-selected {% endif %} mb-2 flex w-[95%] items-center rounded-md px-4 py-3 duration-200 hover:bg-gray-300 dark:hover:bg-slate-700"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mr-3"
+            class="mr-3 size-6"
           >
             <path
               stroke-linecap="round"
@@ -140,14 +140,14 @@
 
         <a
           href="{{ url_for('panel.files') }}"
-          class="{% if request.path == '/panel/tags' %} bg-gray-200 dark:bg-slate-600 {% endif %} px-4 py-3 w-[95%] mb-2 rounded-md duration-200 hover:bg-gray-300 flex items-center dark:hover:bg-slate-700"
+          class="{% if request.path == '/panel/files' %} navbar-link-selected {% endif %} mb-2 flex w-[95%] items-center rounded-md px-4 py-3 duration-200 hover:bg-gray-300 dark:hover:bg-slate-700"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mr-3"
+            class="mr-3 size-6"
           >
             <path
               stroke-linecap="round"
@@ -162,14 +162,14 @@
         {% if current_user.is_admin %}
         <a
           href="{{ url_for('admin.index') }}"
-          class="px-4 py-3 w-[95%] mb-2 rounded-md duration-200 hover:bg-gray-300 flex items-center dark:hover:bg-slate-700"
+          class="mb-2 flex w-[95%] items-center rounded-md px-4 py-3 duration-200 hover:bg-gray-300 dark:hover:bg-slate-700"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mr-3"
+            class="mr-3 size-6"
           >
             <path
               stroke-linecap="round"
@@ -189,14 +189,14 @@
 
         <a
           href="{{ url_for('auth.logout') }}"
-          class="text-white px-4 py-3 w-[95%] mb-2 rounded-md duration-200 bg-red-500 hover:bg-red-600 flex items-center"
+          class="mb-2 flex w-[95%] items-center rounded-md bg-red-500 px-4 py-3 text-white duration-200 hover:bg-red-600"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6 mr-3"
+            class="mr-3 size-6"
           >
             <path
               stroke-linecap="round"
@@ -211,10 +211,10 @@
     <div class="ml-[25%] w-[75%] max-sm:mx-auto">
       {% with messages = get_flashed_messages(with_categories=True) %} {% if
       messages %}
-      <div class="text-center text-xl text-bold w-[70%] mx-auto">
+      <div class="text-bold mx-auto w-[70%] text-center text-xl">
         {% for cattegory, message in messages %}
         <div
-          class="py-4 {% if cattegory == 'error' %} bg-red-200 text-red-700 {% elif cattegory == 'success' %} bg-green-200 text-green-700 {% elif cattegory == 'warning' %} bg-yellow-200 text-yellow-700 {% endif %} rounded-md mb-3"
+          class="{% if cattegory == 'error' %} alert-error {% elif cattegory == 'success' %} alert-success {% elif cattegory == 'warning' %} alert-warning {% endif %} mb-3 rounded-md py-4"
         >
           {{message}}
         </div>

@@ -1,0 +1,229 @@
+# Polish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-09-07 00:18+0200\n"
+"PO-Revision-Date: 2025-09-06 21:16+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pl\n"
+"Language-Team: pl <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/templates/about.html:1
+msgid "About Us"
+msgstr "O Nas"
+
+#: app/templates/about.html:7
+msgid "The PrusMoot Team"
+msgstr "Zespół PrusMoot"
+
+#: app/templates/about.html:9 app/templates/about.html:156
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue "
+"pharetra mauris, vitae luctus quam bibendum nec. Duis fermentum "
+"condimentum neque nec scelerisque. Aenean pharetra ligula in libero "
+"gravida tempus. Quisque nibh dui, tincidunt eu mauris vel, gravida "
+"maximus dolor. Aenean justo sem, fringilla id metus volutpat, maximus "
+"faucibus diam. Nullam congue mauris ex, eu aliquet odio molestie et. "
+"Pellentesque dapibus magna quam, sed condimentum nisl suscipit et. "
+"Curabitur blandit lacinia facilisis. Proin lacinia lorem ut tellus "
+"viverra auctor."
+msgstr "Długi tekst po polsku"
+
+#: app/templates/about.html:28 app/templates/about.html:46
+msgid "Co-Head of the Organising Committee"
+msgstr "Współprzewodnicząca Komitetu Organizacyjnego"
+
+#: app/templates/about.html:65
+msgid "Head of Finance"
+msgstr "Dyrektor Finansowa"
+
+#: app/templates/about.html:81
+msgid "Head of Logistics"
+msgstr "Kierowniczka ds. Logistyki"
+
+#: app/templates/about.html:97
+msgid "Outreach Specialist Male"
+msgstr "Specjalista ds. Kontaktów Zewnętrznych"
+
+#: app/templates/about.html:113
+msgid "Outreach Specialist Female"
+msgstr "Specjalistka ds. Kontaktów Zewnętrznych"
+
+#: app/templates/about.html:129
+msgid "Head of Media"
+msgstr "Kierowniczka ds. Mediów"
+
+#: app/templates/about.html:147
+msgid "Head of Design"
+msgstr "Kierowniczka ds. Projektowania"
+
+#: app/templates/about.html:154
+msgid "Our school"
+msgstr "Nasza szkoła"
+
+#: app/templates/base.html:47 app/templates/home.html:1
+msgid "Home"
+msgstr "Strona&nbsp;Główna"
+
+#: app/templates/base.html:52 app/templates/files.html:1
+#: app/templates/files.html:7
+msgid "Files"
+msgstr "Pliki"
+
+#: app/templates/base.html:57
+msgid "News"
+msgstr "Aktualności"
+
+#: app/templates/base.html:63 app/templates/base.html:82
+msgid "Editions"
+msgstr "Edycje"
+
+#: app/templates/base.html:98
+msgid "Abous"
+msgstr "O"
+
+#: app/templates/base.html:98
+msgid "Us"
+msgstr "Nas"
+
+#: app/templates/base.html:103
+msgid "Moot&nbsp;Guide"
+msgstr "Przewodnik"
+
+#: app/templates/files.html:67
+msgid "Download"
+msgstr "Pobierz"
+
+#: app/templates/home.html:13
+msgid "Lorem"
+msgstr "Polski"
+
+#: app/templates/home.html:36
+msgid "ipsum"
+msgstr "język"
+
+#: app/templates/home.html:39
+msgid "dolor sit amet"
+msgstr "chyba działa"
+
+#: app/templates/home.html:45
+msgid ""
+"Mauris fermentum vehicula felis, vel bibendum urna eleifend vitae. liquam"
+" tristique lacus ac neque fermentum molestie. Nullam quis consequat nulla"
+msgstr "Średniej długości teskt w języku ploskim"
+
+#: app/templates/home.html:52
+msgid "Register now"
+msgstr "Zarejestruj się"
+
+#: app/templates/home.html:57
+msgid "Learn more"
+msgstr "Dowiedz się więcej"
+
+#: app/templates/editions/2024.html:1 app/templates/editions/2025.html:1
+msgid "Edition"
+msgstr "Edycja"
+
+#: app/templates/editions/2024.html:70 app/templates/editions/2025.html:75
+msgid "Details"
+msgstr "Szczegóły"
+
+#: app/templates/editions/2024.html:72 app/templates/editions/2025.html:77
+msgid ""
+"Praesent et dui non nulla tempus auctor. Nulla facilisi. Sed nisl odio, "
+"sodales a dui non, imperdiet viverra urna. Vivamus ipsum nulla, malesuada"
+" non lobortis et, eleifend sed tortor. Cras feugiat nunc sapien, ac "
+"sodales eros mattis a. Cras consectetur, leo a efficitur aliquet, justo "
+"neque pretium mi, nec convallis sem libero sed urna. Donec vitae mauris "
+"rutrum, interdum mauris eget, lobortis eros. Maecenas aliquam tellus ac "
+"ullamcorper dictum. In mollis odio non tortor ullamcorper, quis "
+"pulvinarorci rhoncus. Quisque eu fermentum dolor. Proin dui massa, "
+"consectetur accumsan enim a, venenatis tempor magna. In volutpat arcu nec"
+" sagittis venenatis eleifend. Nullam at lacus vestibulum, vehicula ligula"
+" in, imperdiet dolor. Nullam dictum mauris metus, et tempus diam "
+"scelerisque ipsum, sollicitudin varius magna purus quis erat. Proin urna "
+"odio, volutpat nec elit convallis, sagittis laoreet ex. Vivamus aliquam "
+"congue dapibus. Suspendisse potenti. Nullam molestie ligula quis "
+"consequat consectetur. Nam semper, nulla vitae euismod fermentum, odio "
+"nibh condimentum augue, at gravida dolor tortor a elit. Maecenas et "
+"vestibulum quam. In et faucibus augue, id mollis lectus."
+msgstr "Bardzo bardzo długi polski tekst"
+
+#: app/templates/editions/2024.html:78
+msgid "Archive"
+msgstr "Archiwum"
+
+#: app/templates/editions/2024.html:80
+msgid "Files from this editions are available for download"
+msgstr "Pliki z tej edycji są dostępne do pobrania"
+
+#: app/templates/editions/2024.html:84
+msgid "here"
+msgstr "tutaj"
+
+#: app/templates/editions/2025.html:84
+msgid "How to start?"
+msgstr "Jak zacząć?"
+
+#: app/templates/editions/2025.html:86
+msgid "If you are new to moot, check out our"
+msgstr "Jeśli to Twój pierwszy moot, zapoznaj się z naszym"
+
+#: app/templates/editions/2025.html:90
+msgid "guide"
+msgstr "przewodnikiem"
+
+#: app/templates/editions/2025.html:95
+msgid "Register yourself via"
+msgstr "Zarejestruj się przez"
+
+#: app/templates/editions/2025.html:105
+msgid "Discover"
+msgstr "Odkryj"
+
+#: app/templates/editions/2025.html:109
+msgid "files"
+msgstr "pliki"
+
+#: app/templates/editions/2025.html:111
+msgid "and latest"
+msgstr "i"
+
+#: app/templates/editions/2025.html:115
+msgid "news"
+msgstr "aktualności"
+
+#~ msgid ""
+#~ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue\n"
+#~ "      pharetra mauris, vitae luctus quam bibendum nec. Duis fermentum\n"
+#~ "      condimentum neque nec scelerisque. "
+#~ "Aenean pharetra ligula in libero\n"
+#~ "      gravida tempus. Quisque nibh dui,"
+#~ " tincidunt eu mauris vel, gravida "
+#~ "maximus\n"
+#~ "      dolor. Aenean justo sem, fringilla"
+#~ " id metus volutpat, maximus faucibus\n"
+#~ ""
+#~ "      diam. Nullam congue mauris ex, "
+#~ "eu aliquet odio molestie et. "
+#~ "Pellentesque\n"
+#~ "      dapibus magna quam, sed "
+#~ "condimentum nisl suscipit et. Curabitur "
+#~ "blandit\n"
+#~ "      lacinia facilisis. Proin lacinia lorem ut tellus viverra auctor."
+#~ msgstr ""
+
+#~ msgid "What to do?"
+#~ msgstr "Jak zacząć?"
+

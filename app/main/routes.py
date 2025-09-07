@@ -5,6 +5,9 @@ from app.main import bp
 from app.extensions import db
 from app.models import Post, Tag, File
 
+from datetime import time
+from app.extensions import get_locale
+
 @bp.route("/")
 def home():
     return render_template("home.html")
@@ -23,7 +26,7 @@ from pathlib import Path
 def files():
     UPLOAD_DIR = (Path(current_app.root_path) / current_app.config["UPLOAD_FOLDER"]).resolve()
     
-    path = (current_app.root_path/Path(current_app.config.get("UPLOAD_FOLDER"))/request.args.get("folder", "2025")).resolve(strict=False)
+    path = (current_app.root_path/Path(current_app.config.get("UPLOAD_FOLDER"))/request.args.get("path", "2025")).resolve(strict=False)
    
     if not path.exists() or not str(path).startswith(str(UPLOAD_DIR)):
         path = UPLOAD_DIR / "2025"
@@ -34,9 +37,15 @@ def files():
         if item.is_file():
             uuid = item.name.split('.')[0]
             file_data = File.query.filter_by(uuid=uuid).first_or_404()
-            files.append((uuid, file_data.name_en, file_data.icon, file_data.description_en, file_data.type))
+            files.append((
+            uuid,
+            getattr(file_data, 'name_' + get_locale(), file_data.name_en),
+            file_data.icon,
+            getattr(file_data, 'description_' + get_locale(), file_data.description_en),
+            file_data.type
+            ))
             
-    return render_template("files.html", files=files, folder=request.args.get("folder", "2025"))
+    return render_template("files.html", files=files, folder=request.args.get("path", "2025"))
 
 @bp.route("/download/<folder>/<file>")
 def download(folder, file):
@@ -80,3 +89,13 @@ def post(id):
 @bp.route("/guide")
 def guide():
     return "Guide will be here!"
+
+
+from flask import session
+
+@bp.route("/set_locale/<locale>")
+def set_locale(locale):
+    if locale not in ['en', 'pl']:
+        locale = 'en'
+    session['locale'] = locale
+    return redirect(request.referrer or url_for('main.home'))

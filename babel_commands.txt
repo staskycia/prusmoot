@@ -1,0 +1,4 @@
+pybabel extract -F babel.cfg -o texts.pot .
+pybabel init -i texts.pot -d translations -l pl
+pybabel update -i texts.pot -d translations   
+pybabel compile -d translations

@@ -1,5 +1,5 @@
-{% extends "panel/base.html" %} {% block title%} Posts {% endblock %} {%
-block content%}
+{% extends "panel/base.html" %} {% block title%} Posts {% endblock %} {% block
+content%}
 <script
   src="{{url_for('static', filename='tinymce/tinymce.min.js')}}"
   referrerpolicy="origin"
@@ -128,12 +128,12 @@ block content%}
     tinymce.triggerSave(); // saves all editors
   });
 </script>
-<div class="flex flex-row flex-wrap gap-[2%] justify-center">
+<div class="flex flex-row flex-wrap justify-center gap-[2%]">
   <div
-    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+    class="my-[1%] flex min-h-[300px] w-[98%] min-w-[350px] flex-col items-center justify-evenly rounded-md bg-gray-200 text-center dark:bg-slate-600"
   >
     <div>
-      <h1 class="text-2xl mt-4">Publish a post</h1>
+      <h1 class="mt-4 text-2xl">Publish a post</h1>
     </div>
 
     <form action="{{url_for('panel.posts')}}" method="POST" class="w-[80%]">
@@ -142,7 +142,7 @@ block content%}
       <input
         required
         type="text"
-        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        class="mb-4 w-full rounded-md border-[2px] border-solid border-blue-500 bg-blue-50 px-[1rem] py-[0.9rem] text-blue-500 placeholder-blue-500 duration-150 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none dark:bg-blue-950 dark:text-white dark:placeholder-white dark:hover:bg-blue-900 dark:focus:bg-blue-800"
         name="title_en"
       /><br />
 
@@ -150,7 +150,7 @@ block content%}
       <input
         required
         type="text"
-        class="text-blue-500 placeholder-blue-500 w-full px-[1rem] py-[0.9rem] mb-4 rounded-md duration-150 bg-blue-50 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none border-[2px] border-solid border-blue-500 dark:bg-blue-950 dark:hover:bg-blue-900 dark:focus:bg-blue-800 dark:placeholder-white dark:text-white"
+        class="mb-4 w-full rounded-md border-[2px] border-solid border-blue-500 bg-blue-50 px-[1rem] py-[0.9rem] text-blue-500 placeholder-blue-500 duration-150 hover:bg-blue-100 focus:bg-blue-200 focus:outline-none dark:bg-blue-950 dark:text-white dark:placeholder-white dark:hover:bg-blue-900 dark:focus:bg-blue-800"
         name="title_pl"
       /><br />
 
@@ -163,7 +163,7 @@ block content%}
       <textarea
         id="content_en"
         name="content_en"
-        class="w-[70%] border rounded p-2"
+        class="w-[70%] rounded border p-2"
       ></textarea
       ><br />
 
@@ -171,14 +171,14 @@ block content%}
       <textarea
         id="content_pl"
         name="content_pl"
-        class="w-[70%] border rounded p-2"
+        class="w-[70%] rounded border p-2"
       ></textarea
       ><br />
 
       <span>Tags</span><br />
-      <div class="flex flex-row gap-2 justify-center">
+      <div class="flex flex-row justify-center gap-2">
         {% for tag in tags %}
-        <div class="flex items-center gap-2 mb-2">
+        <div class="mb-2 flex items-center gap-2">
           <input
             type="checkbox"
             id="tag_{{tag.id}}"
@@ -188,7 +188,7 @@ block content%}
           <label
             for="tag_{{tag.id}}"
             style="background-color: {{tag.color}}"
-            class="py-2 px-3 rounded-full"
+            class="rounded-full px-3 py-2"
             >{{tag.name_en}} ({{tag.name_pl}})</label
           >
         </div>
@@ -197,34 +197,34 @@ block content%}
 
       <input
         type="submit"
-        class="mb-4 bg-green-500 px-14 py-2 rounded-full text-white duration-200 hover:bg-green-600 active:bg-green-700"
+        class="mb-4 rounded-full bg-green-500 px-14 py-2 text-white duration-200 hover:bg-green-600 active:bg-green-700"
         value="Publish"
       />
     </form>
   </div>
 
   <div
-    class="w-[98%] min-h-[300px] my-[1%] bg-gray-200 rounded-md min-w-[350px] flex items-center flex-col justify-evenly text-center dark:bg-slate-600"
+    class="my-[1%] flex min-h-[300px] w-[98%] min-w-[350px] flex-col items-center justify-evenly rounded-md bg-gray-200 text-center dark:bg-slate-600"
   >
     <div>
-      <h1 class="text-2xl mt-4">All posts</h1>
+      <h1 class="mt-4 text-2xl">All posts</h1>
     </div>
 
     {% if posts %}
     <table class="min-w-[90%] table-auto">
       <thead class="bg-gray-100 dark:bg-gray-500">
         <tr>
-          <th class="px-4 py-2 text-center border-b border-gray-300">
+          <th class="border-b border-gray-300 px-4 py-2 text-center">
             English title
           </th>
-          <th class="px-4 py-2 text-right border-b border-gray-300">Actions</th>
+          <th class="border-b border-gray-300 px-4 py-2 text-right">Actions</th>
         </tr>
       </thead>
       <tbody>
         {% for post in posts %}
         <tr class="even:bg-gray-100 dark:even:bg-gray-500">
           <td class="px-4 py-2">{{post.title_en}}</td>
-          <td class="px-4 py-2 flex flex-row justify-end gap-3 items-center">
+          <td class="flex flex-row items-center justify-end gap-3 px-4 py-2">
             <a
               href="{{url_for('panel.edit_post', id=post.id)}}"
               target="_blank"

@@ -1,53 +1,56 @@
 {% extends "base.html" %} {% block title %}News{% endblock %} {% block content
 %}
-<main class="w-[90%] mx-auto mt-5 flex flex-col gap-5">
+<main class="mx-auto mt-5 flex w-[90%] flex-col gap-5">
   {% for post in posts %}
   <article>
     <div
       onclick="if (window.matchMedia('(max-width: 768px)').matches) { 
               window.location.href='{{ url_for('main.post', id=post.id) }}'; 
             }"
-      class="max-md:cursor-pointer relative bg-pruslight-300 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] duration-200 transform hover:scale-[1.01] hover:bg-pruslight-200"
+      class="bg-pruslight-300 hover:bg-pruslight-200 relative transform rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] duration-200 hover:scale-[1.01] max-md:cursor-pointer"
     >
       <div class="flex flex-col items-center">
         <div
-          class="w-[65%] min-w-[450px] mb-6 p-10 rounded-lg max-sm:min-w-[99%] max-sm:p-3"
+          class="mb-6 w-[65%] min-w-[450px] rounded-lg p-10 max-sm:min-w-[99%] max-sm:p-3"
         >
-          <h1 class="text-4xl text-center max-lg:mb-2">
-           {{post.title_en}}
+          <h1 class="font-heading text-center text-4xl max-lg:mb-2">
+            {{ getattr(post, 'title_' ~ get_locale(), post.title_en) }}
           </h1>
           <div class="flex flex-row items-center justify-start gap-5 text-lg">
             <div
-              class="w-14 h-14 rounded-full overflow-hidden relative max-sm:w-10 max-sm:h-10"
+              class="relative h-14 w-14 overflow-hidden rounded-full max-sm:h-10 max-sm:w-10"
             >
               <img
                 src="{{ url_for('static', filename='pfps/' + post.author.profile_picture) + '_min.png' }}"
                 alt="profile picture"
-                class="absolute h-full w-auto top-0 left-0 object-cover"
+                class="absolute left-0 top-0 h-full w-auto object-cover"
               />
             </div>
             <header>
               <div
                 class="flex flex-row items-center gap-2 font-light text-gray-500 max-sm:text-sm"
               >
-                <span class="">{{post.author.first_name}} {{post.author.last_name}}</span>
-                <div class="w-1.5 h-1.5 rounded-full bg-gray-500"></div>
-                <time datetime="2025-07-23" class="">{{post.created_at.strftime("%B %d, %Y")}}</time>
+                <span class=""
+                  >{{post.author.first_name}} {{post.author.last_name}}</span
+                >
+                <div class="h-1.5 w-1.5 rounded-full bg-gray-500"></div>
+                <time datetime="{{ post.created_at.isoformat() }}">
+                  {{ post.created_at | dateformat("long") }}
+                </time>
               </div>
             </header>
           </div>
           <div class="">
-            <p class="my-3 line-clamp-4 max-sm:text-sm">
-              {{post.sample_en}}
-            </p>
+            <p class="my-3 line-clamp-4 max-sm:text-sm">{{ getattr(post, 'sample_' ~ get_locale(), post.sample_en) }}</p>
           </div>
           <footer>
             <div class="my-2 flex flex-row flex-wrap gap-2 max-sm:text-sm">
               {% for tag in post.tags %}
               <a
                 href="?tag={{tag.id}}"
-                class="py-2 px-3 rounded-full text-sm duration-200 transform hover:scale-105 hover:bg-sky-300 max-sm:py-1.5 max-sm:px-2.5" style="background-color: {{tag.color}}"
-                >{{tag.name_en}}</a
+                class="transform rounded-full px-3 py-2 text-sm font-semibold duration-200 hover:scale-105 hover:bg-sky-300 max-sm:px-2.5 max-sm:py-1.5"
+                style="background-color: {{tag.color}}"
+                >{{ getattr(tag, 'name_' ~ get_locale(), tag.name_en) }}</a
               >
               {% endfor %}
             </div>
@@ -57,7 +60,7 @@
 
       <a
         href="{{ url_for('main.post', id=post.id) }}"
-        class="max-md:hidden group fixed right-10 top-1/2 -translate-y-1/2 bg-black text-pruslight-300 w-20 h-20 rounded-full inline-flex items-center justify-center"
+        class="text-pruslight-300 group fixed right-10 top-1/2 inline-flex h-20 w-20 -translate-y-1/2 items-center justify-center rounded-full bg-black max-md:hidden"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +68,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.75"
           stroke="currentColor"
-          class="size-8 duration-300 transform transition-transform group-hover:rotate-45"
+          class="size-8 transform transition-transform duration-300 group-hover:rotate-45"
         >
           <path
             stroke-linecap="round"
@@ -78,25 +81,30 @@
   </article>
   {% endfor %}
 </main>
-<div class="flex justify-center my-6 gap-2">
+<div class="my-6 flex justify-center gap-2">
   {% if pagination.has_prev %}
-    <a href="{{ url_for('main.news', page=pagination.prev_num, tag=tag_id) }}" class="px-3 py-2 bg-pruslight-300 rounded hover:bg-pruslight-200 duration-75">Previous</a>
-  {% endif %}
-
-  {% for p in pagination.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-    {% if p %}
-      {% if p == pagination.page %}
-        <span class="px-3 py-2 bg-prusdark-300 text-white rounded">{{ p }}</span>
-      {% else %}
-        <a href="{{ url_for('main.news', page=p, tag=tag_id) }}" class="px-3 py-2 bg-gray-200 rounded hover:bg-gray-300">{{ p }}</a>
-      {% endif %}
-    {% else %}
-      <span class="px-3 py-2">…</span>
-    {% endif %}
-  {% endfor %}
-
-  {% if pagination.has_next %}
-    <a href="{{ url_for('main.news', page=pagination.next_num, tag=tag_id) }}" class="px-3 py-2 bg-pruslight-300 rounded hover:bg-pruslight-200 duration-75">Next</a>
+  <a
+    href="{{ url_for('main.news', page=pagination.prev_num, tag=tag_id) }}"
+    class="bg-pruslight-300 hover:bg-pruslight-200 rounded px-3 py-2 duration-75"
+    >Previous</a
+  >
+  {% endif %} {% for p in pagination.iter_pages(left_edge=1, right_edge=1,
+  left_current=1, right_current=2) %} {% if p %} {% if p == pagination.page %}
+  <span class="bg-prusdark-300 rounded px-3 py-2 text-white">{{ p }}</span>
+  {% else %}
+  <a
+    href="{{ url_for('main.news', page=p, tag=tag_id) }}"
+    class="rounded bg-gray-200 px-3 py-2 hover:bg-gray-300"
+    >{{ p }}</a
+  >
+  {% endif %} {% else %}
+  <span class="px-3 py-2">…</span>
+  {% endif %} {% endfor %} {% if pagination.has_next %}
+  <a
+    href="{{ url_for('main.news', page=pagination.next_num, tag=tag_id) }}"
+    class="bg-pruslight-300 hover:bg-pruslight-200 rounded px-3 py-2 duration-75"
+    >Next</a
+  >
   {% endif %}
 </div>
 {% endblock %}

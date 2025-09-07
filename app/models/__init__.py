@@ -14,7 +14,7 @@ class User(UserMixin, db.Model):
     
     is_admin = db.Column(db.Boolean, nullable=False, default=False)
     
-    is_active = db.Column(db.Boolean, nullable=False, default=True)
+    active = db.Column(db.Boolean, nullable=False, default=True)
     force_password_change = db.Column(db.Boolean, nullable=False, default=False)
     
     password = db.Column(db.String(255), nullable=False)
@@ -91,6 +91,8 @@ class File(db.Model):
     
     description_en = db.Column(db.Text())
     description_pl = db.Column(db.Text())
+    
+    category = db.Column(db.String(100), nullable=False)
     
     type = db.Column(db.String(100), nullable=False)
     icon = db.Column(db.String(100), nullable=False)

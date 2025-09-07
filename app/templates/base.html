@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
@@ -9,106 +9,116 @@
       href="{{ url_for('static', filename='css/style.css') }}"
     />
   </head>
-  <body class="bg-white m-0 p-0">
-    <nav class="sticky top-0 left-0 z-40 w-full  max-lg:hidden">
+  <body class="font-body m-0 bg-white p-0">
+    <nav class="sticky left-0 top-0 z-40 w-full max-lg:hidden">
       {% if current_user.is_authenticated %}
-      <div class="bg-prusdark-300 py-4 px-6 flex flex-row justify-start gap-7">
+      <div class="bg-prusdark-300 flex flex-row justify-start gap-7 px-6 py-4">
         <span class="">Edit:</span>
-        <a href="" class="">Files</a>
+        <a href="{{url_for('panel.files')}}" class="">Files</a>
         <a href="{{url_for('panel.posts')}}" class="">News</a>
         <a href="{{url_for('panel.tags')}}" class="">Tags</a>
         <a href="{{url_for('panel.home')}}" class="">Links</a>
         {% if current_user.is_admin %}
-          <a href="{{url_for('admin.index')}}" class="ml-10">Admin panel</a>
+        <a href="{{url_for('admin.index')}}" class="ml-10">Admin panel</a>
         {% endif %}
       </div>
       {% endif %}
-    <div
-      class="flex flex-row justify-between px-20 py-2 bg-pruslight-300 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] max-lg:flex-col max-lg:items-center max-h-screen"
-    >
-      <a href="{{ url_for('main.home') }}" class="">
-        <div class="flex flex-row gap-3">
-          <img
-            src="{{ url_for('static', filename='img/logo.png') }}"
-            alt="PrusMOOT logo"
-            class="w-[5rem] my-auto"
-          />
-          <span class="my-auto text-3xl"
-            >Prus<span class="text-prusdark">Moot</span></span
-          >
-        </div>
-      </a>
       <div
-        class="flex flex-row justify-between w-[75%] my-auto text-sm max-lg:h-screen max-lg:flex-col max-lg:text-lg max-lg:justify-start"
+        class="bg-pruslight-300 flex max-h-screen flex-row justify-between px-20 py-2 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] max-lg:flex-col max-lg:items-center"
       >
-        <a
-          href="{{ url_for('main.home') }}"
-          class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center"
-          >Home</a
-        >
-        <a
-          href="{{ url_for('main.files') }}"
-          class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center"
-          >Files</a
-        >
-        <a
-          href="{{ url_for('main.news') }}"
-          class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center"
-          >News</a
-        >
-        <!-- Inline nabrar only -->
-        <div class="relative group flex items-center max-lg:hidden">
-          <span
-            href=""
-            class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center"
-            >Editions</span
-          >
-          <div
-            class="absolute top-10 left-0 mt-2 hidden rounded-md group-hover:block min-w-[150px] shadow-[15px_14px_15px_-3px_rgba(0,_0,_0,_0.1)]"
-          >
-            <a
-              href="{{ url_for('main.edition', year=2025) }}"
-              class="block px-5 py-2 bg-pruslight-400 duration-200 hover:text-prusdark active:text-prusdark-600 first:rounded-t-md last:rounded-b-md"
-              >2025</a
-            >
-            <a
-              href="{{ url_for('main.edition', year=2024) }}"
-              class="block px-5 py-2 bg-pruslight-400 duration-200 hover:text-prusdark active:text-prusdark-600 first:rounded-t-md last:rounded-b-md"
-              >2024</a
+        <a href="{{ url_for('main.home') }}" class="">
+          <div class="flex flex-row gap-3">
+            <img
+              src="{{ url_for('static', filename='img/logo.png') }}"
+              alt="PrusMOOT logo"
+              class="my-auto w-[5rem]"
+            />
+            <span class="font-heading my-auto text-3xl"
+              >Prus<span class="text-prusdark">Moot</span></span
             >
           </div>
+        </a>
+        <div
+          class="my-auto flex w-[75%] flex-row justify-between text-sm font-semibold max-lg:h-screen max-lg:flex-col max-lg:justify-start max-lg:text-lg"
+        >
+          <a
+            href="{{ url_for('main.home') }}"
+            class="hover:text-prusdark active:text-prusdark-600  py-5 text-center duration-200"
+            >{{_('Home')}}</a
+          >
+          <a
+            href="{{ url_for('main.files') }}"
+            class="hover:text-prusdark active:text-prusdark-600  py-5 text-center duration-200"
+            >{{_('Files')}}</a
+          >
+          <a
+            href="{{ url_for('main.news') }}"
+            class="hover:text-prusdark active:text-prusdark-600  py-5 text-center duration-200"
+            >{{_('News')}}</a
+          >
+          <!-- Inline nabrar only -->
+          <div class="group relative flex items-center max-lg:hidden">
+            <span
+              class="hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center duration-200"
+              >{{_('Editions')}}</span
+            >
+            <div
+              class="absolute left-0 top-10 mt-2 hidden min-w-[150px] rounded-md shadow-[15px_14px_15px_-3px_rgba(0,_0,_0,_0.1)] group-hover:block"
+            >
+              <a
+                href="{{ url_for('main.edition', year=2025) }}"
+                class="bg-pruslight-400 hover:text-prusdark active:text-prusdark-600 block px-5 py-2 duration-200 first:rounded-t-md last:rounded-b-md"
+                >2025</a
+              >
+              <a
+                href="{{ url_for('main.edition', year=2024) }}"
+                class="bg-pruslight-400 hover:text-prusdark active:text-prusdark-600 block px-5 py-2 duration-200 first:rounded-t-md last:rounded-b-md"
+                >2024</a
+              >
+            </div>
+          </div>
+          <!-- Mobile navbar only -->
+          <span class="px-9 pt-5 text-center text-gray-500 lg:hidden"
+            >{{_('Editions')}}:</span
+          >
+          <a
+            href="{{ url_for('main.edition', year=2025) }}"
+            class="hover:text-prusdark active:text-prusdark-600 px-9 pt-5 text-center duration-200 lg:hidden"
+            >2025</a
+          >
+          <a
+            href="{{ url_for('main.edition', year=2024) }}"
+            class="hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center duration-200 lg:hidden"
+            >2024</a
+          >
+          <!--  -->
+          <a
+            href="{{ url_for('main.about') }}"
+            class="hover:text-prusdark active:text-prusdark-600  py-5 text-center duration-200"
+            >{{_('Abous')}}&nbsp;{{_('Us')}}</a
+          >
+          <a
+            href="{{url_for('main.guide')}}"
+            class="hover:text-prusdark active:text-prusdark-600  py-5 text-center duration-200"
+            >{{_('Moot&nbsp;Guide')}}</a
+          >
+          <a
+            href="{% if get_locale() == 'pl' %}{{ url_for('main.set_locale', locale='en') }}{% elif get_locale() == 'en' %}{{ url_for('main.set_locale', locale='pl') }}{% endif %}"
+            class="hover:text-prusdark active:text-prusdark-600 my-auto text-center duration-200 max-lg:mt-0 max-lg:mx-auto"
+            >
+            {% if get_locale() == 'pl' %}
+            <img src="{{ url_for('static', filename='flags/en.svg') }}" alt="English flag" width="30" />
+            {% elif get_locale() == 'en' %}
+            <img src="{{ url_for('static', filename='flags/pl.svg') }}" alt="Polish flag" width="30" />
+            {% endif %}
+            </a
+          >
         </div>
-        <!-- Mobile navbar only -->
-        <span class="px-9 pt-5 text-center text-gray-500 lg:hidden"
-          >Editions:</span
-        >
-        <a
-          href="{{ url_for('main.edition', year=2025) }}"
-          class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 pt-5 text-center lg:hidden"
-          >2025</a
-        >
-        <a
-          href="{{ url_for('main.edition', year=2024) }}"
-          class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center lg:hidden"
-          >2024</a
-        >
-        <!--  -->
-        <a
-          href="{{ url_for('main.about') }}"
-          class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center"
-          >Abous&nbsp;Us</a
-        >
-        <a
-          href="{{url_for('main.guide')}}"
-          class="duration-200 hover:text-prusdark active:text-prusdark-600 px-9 py-5 text-center"
-          >Moot&nbsp;Guide</a
-        >
       </div>
-    </div>
     </nav>
     <div
       id="showNav"
-      class="fixed top-3 right-3 z-50 lg:hidden text-pruslight bg-prusdark p-3 rounded-md"
+      class="text-pruslight bg-prusdark fixed right-3 top-3 z-50 rounded-md p-3 lg:hidden"
       onclick="document.getElementsByTagName('nav')[0].classList.remove('max-lg:hidden'); this.classList.add('hidden'); document.getElementById('hideNav').classList.remove('hidden')"
     >
       <svg
@@ -128,7 +138,7 @@
     </div>
     <div
       id="hideNav"
-      class="fixed top-10 right-10 z-50 hidden lg:hidden text-prusdark p-3"
+      class="text-prusdark fixed right-10 top-10 z-50 hidden p-3 lg:hidden"
       onclick="document.getElementsByTagName('nav')[0].classList.add('max-lg:hidden'); this.classList.add('hidden'); document.getElementById('showNav').classList.remove('hidden')"
     >
       <svg

@@ -34,25 +34,33 @@
         >
       </p>
 
-      <form method="POST" action="{{url_for('auth.login')}}">
+      <form method="POST" action="{{url_for('auth.password_change')}}">
+
         <input
-          type="email"
-          name="email"
+          type="password"
+          name="current_password"
           required
-          placeholder="Email"
+          placeholder="Current password"
           class="text-prusdark-500 placeholder-prusdark-500 bg-prusdark-50 hover:bg-prusdark-100 focus:bg-prusdark-200 border-prusdark-500 dark:bg-prusdark-800 dark:hover:bg-prusdark-900 dark:focus:bg-prusdark-800 mb-4 rounded-md border-[2px] border-solid px-[1rem] py-[0.9rem] duration-150 focus:outline-none max-sm:h-[40%] max-sm:w-[70%] dark:text-white dark:placeholder-white"
         /><br />
         <input
           type="password"
-          name="password"
+          name="new_password"
           required
-          placeholder="Password"
+          placeholder="New password"
+          class="text-prusdark-500 placeholder-prusdark-500 bg-prusdark-50 hover:bg-prusdark-100 focus:bg-prusdark-200 border-prusdark-500 dark:bg-prusdark-800 dark:hover:bg-prusdark-900 dark:focus:bg-prusdark-800 mb-4 rounded-md border-[2px] border-solid px-[1rem] py-[0.9rem] duration-150 focus:outline-none max-sm:h-[40%] max-sm:w-[70%] dark:text-white dark:placeholder-white"
+        /><br />
+        <input
+          type="password"
+          name="confirm_new_password"
+          required
+          placeholder="Confirm new password"
           class="text-prusdark-500 placeholder-prusdark-500 bg-prusdark-50 hover:bg-prusdark-100 focus:bg-prusdark-200 border-prusdark-500 dark:bg-prusdark-800 dark:hover:bg-prusdark-900 dark:focus:bg-prusdark-800 mb-4 rounded-md border-[2px] border-solid px-[1rem] py-[0.9rem] duration-150 focus:outline-none max-sm:h-[40%] max-sm:w-[70%] dark:text-white dark:placeholder-white"
         /><br />
         <input
           type="submit"
           class="bg-prusdark-500 hover:bg-prusdark-600 active:bg-prusdark-700 rounded-full px-14 py-2 text-white duration-200"
-          value="Login"
+          value="Change"
         />
       </form>
     </div>

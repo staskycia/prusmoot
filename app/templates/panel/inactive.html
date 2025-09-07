@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FileDrop Panel Login</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+  </head>
+  <body class="bg-pruslight-300 m-0 p-0 dark:bg-slate-900">
+    {% with messages = get_flashed_messages(with_categories=True) %} {% if
+    messages %}
+    <div class="text-bold mx-auto w-[20%] text-center text-xl">
+      {% for category, message in messages %}
+      <div
+        class="{% if category == 'error' %} alert-error {% elif category == 'success' %} alert-success {% elif category == 'warning' %} alert-warning {% endif %} mb-3 rounded-md py-4"
+      >
+        {{message}}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+
+    <div
+      class="flex min-h-screen flex-col content-evenly items-center justify-center text-center"
+    >
+      <p class="p-4 text-5xl dark:text-white">
+        PrusMoot
+        <span
+          class="from-prusdark-400 to-prusdark-600 inline-block bg-gradient-to-r bg-clip-text py-2 font-bold text-transparent"
+          >Panel</span
+        >
+      </p>
+
+      <a
+        href="{{url_for('auth.logout')}}"
+        class="bg-prusdark-500 hover:bg-prusdark-600 active:bg-prusdark-700 rounded-full px-14 py-2 text-white duration-200"
+      >Logout</a>
+    </div>
+  </body>
+</html>

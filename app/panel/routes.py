@@ -33,6 +33,7 @@ def home():
             link = Link(alias=alias, target=target)
             db.session.add(link)
             db.session.commit()
+            links = Link.query.all()
             flash("Link added!", "success")
         elif field == "delete":
             alias = request.form.get("alias")
@@ -46,6 +47,7 @@ def home():
                     db.session.delete(link)
                     db.session.commit()
                     flash("Link deleted!", "success")
+                    links = Link.query.all()
             return render_template("panel/links.html", links=links)
                     
                 
@@ -230,10 +232,52 @@ def files():
         if not icon_path.exists():
             icon = "blank.svg"
         
-        db.session.add(File(uuid=uuid, name_en=name_en, name_pl=name_pl, description_en=description_en, description_pl=description_pl, type=filetype, icon=icon))
+        db.session.add(File(uuid=uuid, name_en=name_en, name_pl=name_pl, description_en=description_en, description_pl=description_pl, type=filetype, icon=icon, category=category))
         db.session.commit()
         
         flash("File uploaded!", "success")
         
+    files = File.query.all()
+    return render_template("panel/files.html", categories=categories, files=files)
+
+@bp.route("/files/delete", methods=["POST"])
+@login_required
+def delete_file():
+    id = request.form.get("id")
+    path = (current_app.root_path/Path(current_app.config.get("UPLOAD_FOLDER"))).resolve()
+    
+    if id:
+        file = db.session.get(File, id)
         
-    return render_template("panel/files.html", categories=categories)
+        if file:
+            category = file.category
+            filename = f"{file.uuid}.{file.type}"
+            
+            file_path = Path((path/category/filename))
+            
+            file_path.unlink()
+            
+            db.session.delete(file)
+            db.session.commit()
+            
+            flash("File deleted!", "success")
+    
+    return redirect(url_for("panel.files"))
+
+@bp.route("/inactive")
+@login_required
+def inactive():
+    flash("Sorry, your account isn't active!", "error")
+    return render_template("panel/inactive.html")
+
+@bp.before_request
+def check_if_active():
+    if current_user.is_authenticated and current_user.active and request.endpoint == "panel.inactive":
+        return redirect(url_for("panel.home"))
+    if current_user.is_authenticated and not current_user.active and not request.endpoint == "panel.inactive":
+        return redirect(url_for("panel.inactive"))
+    
+@bp.before_request
+def check_for_password_change():
+    if current_user.is_authenticated and current_user.force_password_change and not request.endpoint == "auth.password_change":
+        return redirect(url_for("auth.password_change"))

@@ -1,0 +1,204 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-09-07 00:18+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/templates/about.html:1
+msgid "About Us"
+msgstr ""
+
+#: app/templates/about.html:7
+msgid "The PrusMoot Team"
+msgstr ""
+
+#: app/templates/about.html:9 app/templates/about.html:156
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue "
+"pharetra mauris, vitae luctus quam bibendum nec. Duis fermentum "
+"condimentum neque nec scelerisque. Aenean pharetra ligula in libero "
+"gravida tempus. Quisque nibh dui, tincidunt eu mauris vel, gravida "
+"maximus dolor. Aenean justo sem, fringilla id metus volutpat, maximus "
+"faucibus diam. Nullam congue mauris ex, eu aliquet odio molestie et. "
+"Pellentesque dapibus magna quam, sed condimentum nisl suscipit et. "
+"Curabitur blandit lacinia facilisis. Proin lacinia lorem ut tellus "
+"viverra auctor."
+msgstr ""
+
+#: app/templates/about.html:28 app/templates/about.html:46
+msgid "Co-Head of the Organising Committee"
+msgstr ""
+
+#: app/templates/about.html:65
+msgid "Head of Finance"
+msgstr ""
+
+#: app/templates/about.html:81
+msgid "Head of Logistics"
+msgstr ""
+
+#: app/templates/about.html:97
+msgid "Outreach Specialist Male"
+msgstr ""
+
+#: app/templates/about.html:113
+msgid "Outreach Specialist Female"
+msgstr ""
+
+#: app/templates/about.html:129
+msgid "Head of Media"
+msgstr ""
+
+#: app/templates/about.html:147
+msgid "Head of Design"
+msgstr ""
+
+#: app/templates/about.html:154
+msgid "Our school"
+msgstr ""
+
+#: app/templates/base.html:47 app/templates/home.html:1
+msgid "Home"
+msgstr ""
+
+#: app/templates/base.html:52 app/templates/files.html:1
+#: app/templates/files.html:7
+msgid "Files"
+msgstr ""
+
+#: app/templates/base.html:57
+msgid "News"
+msgstr ""
+
+#: app/templates/base.html:63 app/templates/base.html:82
+msgid "Editions"
+msgstr ""
+
+#: app/templates/base.html:98
+msgid "Abous"
+msgstr ""
+
+#: app/templates/base.html:98
+msgid "Us"
+msgstr ""
+
+#: app/templates/base.html:103
+msgid "Moot&nbsp;Guide"
+msgstr ""
+
+#: app/templates/files.html:67
+msgid "Download"
+msgstr ""
+
+#: app/templates/home.html:13
+msgid "Lorem"
+msgstr ""
+
+#: app/templates/home.html:36
+msgid "ipsum"
+msgstr ""
+
+#: app/templates/home.html:39
+msgid "dolor sit amet"
+msgstr ""
+
+#: app/templates/home.html:45
+msgid ""
+"Mauris fermentum vehicula felis, vel bibendum urna eleifend vitae. liquam"
+" tristique lacus ac neque fermentum molestie. Nullam quis consequat nulla"
+msgstr ""
+
+#: app/templates/home.html:52
+msgid "Register now"
+msgstr ""
+
+#: app/templates/home.html:57
+msgid "Learn more"
+msgstr ""
+
+#: app/templates/editions/2024.html:1 app/templates/editions/2025.html:1
+msgid "Edition"
+msgstr ""
+
+#: app/templates/editions/2024.html:70 app/templates/editions/2025.html:75
+msgid "Details"
+msgstr ""
+
+#: app/templates/editions/2024.html:72 app/templates/editions/2025.html:77
+msgid ""
+"Praesent et dui non nulla tempus auctor. Nulla facilisi. Sed nisl odio, "
+"sodales a dui non, imperdiet viverra urna. Vivamus ipsum nulla, malesuada"
+" non lobortis et, eleifend sed tortor. Cras feugiat nunc sapien, ac "
+"sodales eros mattis a. Cras consectetur, leo a efficitur aliquet, justo "
+"neque pretium mi, nec convallis sem libero sed urna. Donec vitae mauris "
+"rutrum, interdum mauris eget, lobortis eros. Maecenas aliquam tellus ac "
+"ullamcorper dictum. In mollis odio non tortor ullamcorper, quis "
+"pulvinarorci rhoncus. Quisque eu fermentum dolor. Proin dui massa, "
+"consectetur accumsan enim a, venenatis tempor magna. In volutpat arcu nec"
+" sagittis venenatis eleifend. Nullam at lacus vestibulum, vehicula ligula"
+" in, imperdiet dolor. Nullam dictum mauris metus, et tempus diam "
+"scelerisque ipsum, sollicitudin varius magna purus quis erat. Proin urna "
+"odio, volutpat nec elit convallis, sagittis laoreet ex. Vivamus aliquam "
+"congue dapibus. Suspendisse potenti. Nullam molestie ligula quis "
+"consequat consectetur. Nam semper, nulla vitae euismod fermentum, odio "
+"nibh condimentum augue, at gravida dolor tortor a elit. Maecenas et "
+"vestibulum quam. In et faucibus augue, id mollis lectus."
+msgstr ""
+
+#: app/templates/editions/2024.html:78
+msgid "Archive"
+msgstr ""
+
+#: app/templates/editions/2024.html:80
+msgid "Files from this editions are available for download"
+msgstr ""
+
+#: app/templates/editions/2024.html:84
+msgid "here"
+msgstr ""
+
+#: app/templates/editions/2025.html:84
+msgid "How to start?"
+msgstr ""
+
+#: app/templates/editions/2025.html:86
+msgid "If you are new to moot, check out our"
+msgstr ""
+
+#: app/templates/editions/2025.html:90
+msgid "guide"
+msgstr ""
+
+#: app/templates/editions/2025.html:95
+msgid "Register yourself via"
+msgstr ""
+
+#: app/templates/editions/2025.html:105
+msgid "Discover"
+msgstr ""
+
+#: app/templates/editions/2025.html:109
+msgid "files"
+msgstr ""
+
+#: app/templates/editions/2025.html:111
+msgid "and latest"
+msgstr ""
+
+#: app/templates/editions/2025.html:115
+msgid "news"
+msgstr ""
+

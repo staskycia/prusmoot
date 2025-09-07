@@ -1,12 +1,12 @@
-{% extends "base.html" %} {% block title %}Edition 2024{% endblock %} {% block
+{% extends "base.html" %} {% block title %}{{_('Edition')}} 2024{% endblock %} {% block
 content %}
-<main class="w-[90%] mx-auto mt-5">
+<main class="mx-auto mt-5 w-[90%]">
   <div
     class="bg-pruslight-300 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
   >
-    <h1 class="text-4xl">PrusMoot 2024</h1>
-    <div class="text-lg mt-3">
-      <div class="flex flex-row gap-3 mb-3">
+    <h1 class="font-heading text-4xl">PrusMoot 2024</h1>
+    <div class="mt-3 text-lg">
+      <div class="mb-3 flex flex-row gap-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -21,9 +21,9 @@ content %}
             d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
           />
         </svg>
-        <span class="">October XX</span>
+        <span class="">{{date(2024, 10, 3) | dateformat("d MMMM")}}</span>
       </div>
-      <div class="flex flex-row gap-3 mb-3">
+      <div class="mb-3 flex flex-row gap-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -38,9 +38,9 @@ content %}
             d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
           />
         </svg>
-        <span class="">9:00 - 12:00</span>
+        <span class="">{{time(9, 0) | timeformat('short')}} - {{time(12, 0) | timeformat('short')}}</span>
       </div>
-      <div class="flex flex-row gap-3 mb-3">
+      <div class="mb-3 flex flex-row gap-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -65,42 +65,23 @@ content %}
     </div>
   </div>
   <div
-    class="bg-pruslight-300 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)] my-3"
+    class="bg-pruslight-300 my-3 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
   >
-    <h1 class="text-4xl">Details</h1>
+    <h1 class="font-heading text-4xl">{{_('Details')}}</h1>
     <p class="">
-      Praesent et dui non nulla tempus auctor. Nulla facilisi. Sed nisl odio,
-      sodales a dui non, imperdiet viverra urna. Vivamus ipsum nulla, malesuada
-      non lobortis et, eleifend sed tortor. Cras feugiat nunc sapien, ac sodales
-      eros mattis a. Cras consectetur, leo a efficitur aliquet, justo neque
-      pretium mi, nec convallis sem libero sed urna. Donec vitae mauris rutrum,
-      interdum mauris eget, lobortis eros. Maecenas aliquam tellus ac
-      ullamcorper dictum. In mollis odio non tortor ullamcorper, quis pulvinar
-      orci rhoncus. Quisque eu fermentum dolor. Proin dui massa, consectetur
-      accumsan enim a, venenatis tempor magna. In volutpat arcu nec sagittis
-      lobortis. Praesent ultricies ullamcorper ultricies. Vivamus dignissim elit
-      vitae sem ultrices, vel mattis risus luctus. Nam semper sapien at
-      venenatis eleifend. Nullam at lacus vestibulum, vehicula ligula in,
-      imperdiet dolor. Nullam dictum mauris metus, et tempus diam scelerisque
-      sit amet. Etiam porttitor, lacus vel finibus placerat, lorem enim suscipit
-      ipsum, sollicitudin varius magna purus quis erat. Proin urna odio,
-      volutpat nec elit convallis, sagittis laoreet ex. Vivamus aliquam congue
-      dapibus. Suspendisse potenti. Nullam molestie ligula quis consequat
-      consectetur. Nam semper, nulla vitae euismod fermentum, odio nibh
-      condimentum augue, at gravida dolor tortor a elit. Maecenas et vestibulum
-      quam. In et faucibus augue, id mollis lectus.
+      {{_('Praesent et dui non nulla tempus auctor. Nulla facilisi. Sed nisl odio, sodales a dui non, imperdiet viverra urna. Vivamus ipsum nulla, malesuada non lobortis et, eleifend sed tortor. Cras feugiat nunc sapien, ac sodales eros mattis a. Cras consectetur, leo a efficitur aliquet, justo neque pretium mi, nec convallis sem libero sed urna. Donec vitae mauris rutrum, interdum mauris eget, lobortis eros. Maecenas aliquam tellus ac ullamcorper dictum. In mollis odio non tortor ullamcorper, quis pulvinarorci rhoncus. Quisque eu fermentum dolor. Proin dui massa, consectetur accumsan enim a, venenatis tempor magna. In volutpat arcu nec sagittis venenatis eleifend. Nullam at lacus vestibulum, vehicula ligula in, imperdiet dolor. Nullam dictum mauris metus, et tempus diam scelerisque ipsum, sollicitudin varius magna purus quis erat. Proin urna odio, volutpat nec elit convallis, sagittis laoreet ex. Vivamus aliquam congue dapibus. Suspendisse potenti. Nullam molestie ligula quis consequat consectetur. Nam semper, nulla vitae euismod fermentum, odio nibh condimentum augue, at gravida dolor tortor a elit. Maecenas et vestibulum quam. In et faucibus augue, id mollis lectus.')}}'
     </p>
   </div>
   <div
     class="bg-pruslight-300 rounded-md p-6 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.05)]"
   >
-    <h1 class="text-4xl mb-2">Archive</h1>
+    <h1 class="font-heading mb-2 text-4xl">{{_('Archive')}}</h1>
     <p class="mb-4 text-gray-700">
-      Files from this editions are available for download
+      {{_('Files from this editions are available for download')}}
       <a
         href="{{url_for('main.files', path='2024')}}"
         class="text-prusdark hover:text-prusdark-600 italic"
-        >here</a
+        >{{_('here')}}</a
       >.
     </p>
   </div>

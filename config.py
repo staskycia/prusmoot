@@ -19,4 +19,5 @@ class Config:
     MAIL_USE_TLS = os.getenv("MAIL_USE_TLS", "False").lower() == "true"
     MAIL_USE_SSL = os.getenv("MAIL_USE_SSL", "False").lower() == "true"
     MAIL_SUPPRESS_SEND =  os.getenv("MAIL_SUPPRESS_SEND", "False").lower() == "true"
+    BABEL_TRANSLATION_DIRECTORIES = "/Users/skycia/prusmoot/translations"
     # FLASK_ADMIN_SWATCH = os.getenv("FLASK_ADMIN_SWATCH")

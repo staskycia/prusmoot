@@ -7,7 +7,7 @@ from app.models import User
 
 login_manager = LoginManager()
 login_manager.login_view = "auth.login"
-login_manager.login_message = "You need to login with an active account before accesing this page!"
+login_manager.login_message = "You need to login before accesing this page!"
 login_manager.login_message_category = "error"
 
 @login_manager.user_loader
@@ -29,3 +29,15 @@ class MyAdminIndexView(AdminIndexView):
         return redirect(url_for("auth.login"))
 
 admin = Admin(name='PrusMoot Admin', template_mode='bootstrap3', index_view=MyAdminIndexView())
+
+from flask_babel import Babel
+babel = Babel()
+
+from flask import request, session
+
+def get_locale():
+    prefered = session.get('locale', None)  
+    if prefered:
+        return prefered
+    language = request.accept_languages.best_match(["en", "pl"])
+    return language

@@ -3,7 +3,7 @@ from flask import flash, redirect, url_for, request
 from flask_login import current_user
 
 from flask_admin.contrib.sqla import ModelView
-from flask_admin import BaseView, expose
+from flask_admin import BaseView, expose, menu
 
 from app.models import User, Post, Link, Tag, File
 
@@ -53,7 +53,6 @@ class TagAdmin(SecureModelView):
         'color': ColorField
     }
 
-
 def init_admin_views():
     admin.add_view(SecureModelView(User, db.session, name="Users"))
     admin.add_view(PostAdmin(Post, db.session, name="Posts"))
@@ -61,3 +60,7 @@ def init_admin_views():
     admin.add_view(SecureModelView(Link, db.session, endpoint="linkadmin", url="/linkadmin", name="Links"))
     admin.add_view(SecureModelView(File, db.session, name="Files"))
     admin.add_view(PasswordHashView(name="Generate Password Hash"))
+
+    admin.add_link(menu.MenuLink(name="Logout", category="", url="/auth/logout"))
+    admin.add_link(menu.MenuLink(name="Site", category="Go to", url="/"))
+    admin.add_link(menu.MenuLink(name="Panel", category="Go to", url="/panel"))

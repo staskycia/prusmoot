@@ -30,4 +30,41 @@ def logout():
     flash("You were securely logged out!", "success")
     return redirect("login")
 
+@bp.route("/password_change", methods=["POST", "GET"])
+@login_required
+def password_change():
+    if not current_user.force_password_change:
+        return redirect(url_for("panel.home"))
+    
+    if request.method == "POST":
+        current_password = request.form.get("current_password")
+        new_password = request.form.get("new_password")
+        confirm_new_password = request.form.get("confirm_new_password")
+        
+        if not current_password or not new_password or not confirm_new_password:
+            flash("All fields are required!", "error")
+            return render_template("auth/reset.html")
+        
+        if not check_password_hash(current_user.password, current_password):
+            flash("Wrong current password!", "error")
+            return render_template("auth/reset.html")
+        
+        if new_password != confirm_new_password:
+            flash("Passwords do not match!", "error")
+            return render_template("auth/reset.html")
+        
+        if new_password == current_password:
+            flash("New password must be different!", "error")
+            return render_template("auth/reset.html")
+        
+        current_user.password = generate_password_hash(new_password)
+        current_user.force_password_change = False
+        db.session.commit()
+        
+        flash("Password was changed!", "success")
+        return redirect(url_for("auth.logout"))
+    
+    flash("For security reasons, you need to change your password!", "warning")
+    return render_template("auth/reset.html")
+
 from datetime import datetime, timezone, timedelta

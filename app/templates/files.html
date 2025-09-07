@@ -1,21 +1,21 @@
-{% extends "base.html" %} {% block title %}Files{% endblock %} {% block content
+{% extends "base.html" %} {% block title %}{{_('Files')}}{% endblock %} {% block content
 %}
-<main class="w-[90%] mx-auto mt-5">
+<main class="mx-auto mt-5 w-[90%]">
   <div
     class="bg-pruslight-300 rounded-md p-6 shadow-[0_5px_15px_-3px_rgba(0,0,0,0.05)]"
   >
-    <h1 class="text-4xl mb-2">Files</h1>
+    <h1 class="font-heading mb-2 text-4xl">{{_('Files')}}</h1>
     <!-- <p class="mb-4 text-gray-700">
       Only files related to the current edition are shown here. For archive
       documents, please see the <i>editions</i> tab.
     </p> -->
 
     <div
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+      class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
     >
       {% for file in files %}
       <div
-        class="cursor-pointer text-center hover:text-prusdark duration-200 file-item"
+        class="hover:text-prusdark file-item cursor-pointer text-center duration-200"
         data-id="{{ file[0] }}"
         data-name="{{ file[1] }}"
         data-description="{{ file[3]|e }}"
@@ -23,9 +23,9 @@
       >
         <img
           src="{{ url_for('static', filename='file_icons/' + file[2]) }}"
-          class="w-16 mx-auto mb-2"
+          class="mx-auto mb-2 w-16"
         />
-        <span>{{ file[1] }}</span>
+        <span class="">{{ file[1] }}</span>
       </div>
       {% endfor %}
     </div>
@@ -34,9 +34,9 @@
 
 <div
   id="file-popup"
-  class="hidden w-[90%] max-w-[35rem] h-[20rem] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-md glass text-center flex flex-col items-center justify-evenly"
+  class="glass fixed left-1/2 top-1/2 z-50 flex hidden h-[20rem] w-[90%] max-w-[35rem] -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-evenly rounded-md text-center"
 >
-  <div class="flex justify-between items-center w-full px-6">
+  <div class="flex w-full items-center justify-between px-6">
     <h2 id="popup-title" class="text-2xl"></h2>
     <span id="popup-close" class="cursor-pointer">
       <svg
@@ -44,7 +44,7 @@
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
-        class="w-7 stroke-black hover:stroke-prusdark duration-150"
+        class="hover:stroke-prusdark w-7 stroke-black duration-150"
       >
         <path
           stroke-linecap="round"
@@ -56,15 +56,15 @@
   </div>
   <div
     id="popup-description"
-    class="px-6 text-left overflow-y-auto max-h-[60%]"
+    class="max-h-[60%] overflow-y-auto px-6 text-left"
   ></div>
   <div>
     <a
       id="popup-download"
       href="#"
       target="_blank"
-      class="px-6 py-2.5 bg-black text-white rounded-full hover:bg-prusdark-400 active:bg-prusdark-500 duration-300"
-      >Download</a
+      class="hover:bg-prusdark-400 active:bg-prusdark-500 rounded-full bg-black px-6 py-2.5 font-semibold text-white duration-300"
+      >{{_('Download')}}</a
     >
   </div>
 </div>
