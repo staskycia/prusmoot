@@ -8,3 +8,4 @@ tailwind.config.js
 .DS_Store
 lipsum.txt
 venv
+.env

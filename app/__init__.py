@@ -9,7 +9,13 @@ from app.admin_views import init_admin_views
 from datetime import time, date
     
 def create_app(config_class = Config):
+    # PRODUCTION
+    # app = Flask(__name__, subdomain_matching=True)
+    
+    # DEV
     app = Flask(__name__)
+    #
+    
     app.config.from_object(config_class)
     
     db.init_app(app)
@@ -40,6 +46,6 @@ def create_app(config_class = Config):
     app.register_blueprint(panel_bp, url_prefix="/panel")
     
     from app.link import bp as link_bp
-    app.register_blueprint(link_bp, url_prefix="/link")
+    app.register_blueprint(link_bp, subdomain="link")
     
     return app

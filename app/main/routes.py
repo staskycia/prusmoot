@@ -99,3 +99,29 @@ def set_locale(locale):
         locale = 'en'
     session['locale'] = locale
     return redirect(request.referrer or url_for('main.home'))
+
+from flask_login import current_user
+from flask import Response
+
+@bp.route("/robots.txt")
+def robots_txt():
+    content = """User-agent: *
+Disallow: /panel
+Disallow: /panel/
+Disallow: /panel/*
+Disallow: /auth
+Disallow: /auth/
+Disallow: /auth/*
+Disallow: /admin
+Disallow: /admin/
+Disallow: /admin/*
+"""
+    return Response(content, mimetype="text/plain")
+
+@bp.before_request
+def maintenance():
+    if request.path in ["/robots.txt"] or request.path.startswith("/static/"):
+        return None
+    
+    if not current_user.is_authenticated:
+        return render_template("maintance.html")

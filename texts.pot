@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-07 00:18+0200\n"
+"POT-Creation-Date: 2025-09-14 23:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,32 +70,32 @@ msgstr ""
 msgid "Our school"
 msgstr ""
 
-#: app/templates/base.html:47 app/templates/home.html:1
+#: app/templates/base.html:71 app/templates/home.html:1
 msgid "Home"
 msgstr ""
 
-#: app/templates/base.html:52 app/templates/files.html:1
+#: app/templates/base.html:76 app/templates/files.html:1
 #: app/templates/files.html:7
 msgid "Files"
 msgstr ""
 
-#: app/templates/base.html:57
+#: app/templates/base.html:81
 msgid "News"
 msgstr ""
 
-#: app/templates/base.html:63 app/templates/base.html:82
+#: app/templates/base.html:87 app/templates/base.html:106
 msgid "Editions"
 msgstr ""
 
-#: app/templates/base.html:98
+#: app/templates/base.html:122
 msgid "Abous"
 msgstr ""
 
-#: app/templates/base.html:98
+#: app/templates/base.html:122
 msgid "Us"
 msgstr ""
 
-#: app/templates/base.html:103
+#: app/templates/base.html:127
 msgid "Moot&nbsp;Guide"
 msgstr ""
 
@@ -127,6 +127,17 @@ msgstr ""
 
 #: app/templates/home.html:57
 msgid "Learn more"
+msgstr ""
+
+#: app/templates/maintance.html:36
+msgid "Great things take time. We will be live shortly."
+msgstr ""
+
+#: app/templates/maintance.html:39
+msgid ""
+"PrusMoot is a moot court competition designated for young law "
+"passionates. This year we are happy to announce the it’s second edition "
+"already!"
 msgstr ""
 
 #: app/templates/editions/2024.html:1 app/templates/editions/2025.html:1
