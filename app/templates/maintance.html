@@ -12,21 +12,21 @@
 
     <meta property="og:title" content="PrusMoot – Moot Court Competition" />
     <meta property="og:description" content="An international moot court competition for young law enthusiasts. Second edition launching soon!" />
-    <meta property="og:image" content="{{url_for('static', filename='img/logo.png')}}" />
+    <meta property="og:image" content="{{url_for('static', filename='img/logo.png', _external=True)}}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{request.path}}" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PrusMoot – Moot Court Competition" />
     <meta name="twitter:description" content="Second edition launching soon – join passionate law students worldwide at PrusMoot." />
-    <meta name="twitter:image" content="{{url_for('static', filename='img/logo.png')}}" />
+    <meta name="twitter:image" content="{{url_for('static', filename='img/logo.png', _external=True)}}" />
 
-    <link rel="icon" type="image/png" href="{{url_for('static', filename='icons/favicon-96x96.png')}}" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="{{url_for('static', filename='icons/favicon.svg')}}" />
-    <link rel="shortcut icon" href="{{url_for('static', filename='icons/favicon.ico')}}" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='icons/apple-touch-icon.png')}}" />
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='icons/favicon-96x96.png', _external=True)}}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{url_for('static', filename='icons/favicon.svg', _external=True)}}" />
+    <link rel="shortcut icon" href="{{url_for('static', filename='icons/favicon.ico', _external=True)}}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='icons/apple-touch-icon.png', _external=True)}}" />
     <meta name="apple-mobile-web-app-title" content="PrusMoot" />
-    <link rel="manifest" href="{{url_for('static', filename='icons/site.webmanifest')}}" />
+    <link rel="manifest" href="{{url_for('static', filename='icons/site.webmanifest', _external=True)}}" />
   </head>
   <body class="bg-pruslight-300 m-0 p-0 text-prusdark">
     <div
