@@ -669,8 +669,8 @@ video {
   top: 1rem;
 }
 
-.top-\[1\.1rem\]{
-  top: 1.1rem;
+.top-\[-2rem\]{
+  top: -2rem;
 }
 
 .z-0{
@@ -727,6 +727,10 @@ video {
   margin-bottom: auto;
 }
 
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -779,6 +783,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.ml-2{
+  margin-left: 0.5rem;
+}
+
 .line-clamp-4{
   overflow: hidden;
   display: -webkit-box;
@@ -808,6 +816,10 @@ video {
 
 .grid{
   display: grid;
+}
+
+.contents{
+  display: contents;
 }
 
 .hidden{
@@ -860,6 +872,10 @@ video {
   height: 100vh;
 }
 
+.h-3{
+  height: 0.75rem;
+}
+
 .max-h-\[60\%\]{
   max-height: 60%;
 }
@@ -908,8 +924,8 @@ video {
   width: 1.75rem;
 }
 
-.w-\[140\%\]{
-  width: 140%;
+.w-\[115\%\]{
+  width: 115%;
 }
 
 .w-\[20\%\]{
@@ -968,6 +984,10 @@ video {
   width: 100%;
 }
 
+.w-\[50\%\]{
+  width: 50%;
+}
+
 .min-w-\[150px\]{
   min-width: 150px;
 }
@@ -986,6 +1006,14 @@ video {
 
 .max-w-\[35rem\]{
   max-width: 35rem;
+}
+
+.max-w-\[90\%\]{
+  max-width: 90%;
+}
+
+.flex-grow{
+  flex-grow: 1;
 }
 
 .table-auto{
@@ -1008,6 +1036,18 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.list-inside{
+  list-style-position: inside;
+}
+
+.list-disc{
+  list-style-type: disc;
+}
+
+.list-decimal{
+  list-style-type: decimal;
 }
 
 .grid-cols-1{
@@ -1541,11 +1581,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-prusdark-50{
-  --tw-text-opacity: 1;
-  color: rgb(228 180 176 / var(--tw-text-opacity));
-}
-
 .underline{
   text-decoration-line: underline;
 }
@@ -1596,6 +1631,40 @@ video {
   --tw-shadow: 15px 14px 15px -3px rgba(0, 0, 0, 0.1);
   --tw-shadow-colored: 15px 14px 15px -3px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[100px_5px_15px_-3px_rgba\(0\2c _0\2c _0\2c _0\.05\)\]{
+  --tw-shadow: 100px 5px 15px -3px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 100px 5px 15px -3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[5px_0px_15px_-3px_rgba\(0\2c _0\2c _0\2c _0\.05\)\]{
+  --tw-shadow: 5px 0px 15px -3px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 5px 0px 15px -3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[5px_0px_150px_-3px_rgba\(0\2c _0\2c _0\2c _0\.05\)\]{
+  --tw-shadow: 5px 0px 150px -3px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 5px 0px 150px -3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[15px_5px_15px_-3px_rgba\(0\2c _0\2c _0\2c _0\.05\)\]{
+  --tw-shadow: 15px 5px 15px -3px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 15px 5px 15px -3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0px_-5px_15px_-3px_rgba\(0\2c _0\2c _0\2c _0\.05\)\]{
+  --tw-shadow: 0px -5px 15px -3px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 0px -5px 15px -3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline{
+  outline-style: solid;
 }
 
 .blur{

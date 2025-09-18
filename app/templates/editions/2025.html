@@ -6,7 +6,17 @@ content %}
   >
     <h1 class="font-heading text-4xl">PrusMoot 2025</h1>
     <div class="mt-3 text-lg">
-      <div class="mb-3 flex flex-row gap-3">
+      <h2 class="font-heading text-2xl">{{_('Timeline')}}</h2>
+      <ul class="list-disc list-inside">
+        <li class="mb-1">{{date(2025, 9, 18) | dateformat("d.MM")}} - {{_('end of registration')}}</li>
+        <li class="mb-1">{{date(2025, 9, 19) | dateformat("d.MM")}} - {{_('case file made available')}}</li>
+        <li class="mb-1">{{date(2025, 10, 4) | dateformat("d.MM")}} - {{_('stage 1: memorial deadline')}}</li>
+        <li class="mb-1">{{date(2025, 10, 16) | dateformat("d.MM")}} ({{time(13, 0) | timeformat('short')}} - {{time(20, 0) | timeformat('short')}}) -  {{_('conference and announcement')}}</li>
+        <li class="mb-1">{{date(2025, 10, 23) | dateformat("d.MM")}} ({{time(14, 0) | timeformat('short')}} - {{time(20, 0) | timeformat('short')}}) - {{_('stage 2: quarter and semi-finals')}}</li>
+        <li class="mb-1">{{date(2025, 10, 24) | dateformat("d.MM")}} ({{time(14, 0) | timeformat('short')}} - {{time(20, 0) | timeformat('short')}}) - {{_('stage 2: finals')}}</li>
+      </ul>
+      <h2 class="font-heading text-2xl">{{_('Venue')}}: {{_('CMS law firm office in Varso Tower')}}</h2>
+      <!-- <div class="mb-3 flex flex-row gap-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -22,7 +32,7 @@ content %}
           />
         </svg>
 
-        <span class="">{{date(2025, 10, 3) | dateformat("d MMMM")}}</span>
+        <span class="">{{date(2025, 9, 18) | dateformat("d MMMM")}}</span>
       </div>
 
       <div class="mb-3 flex flex-row gap-3">
@@ -65,7 +75,7 @@ content %}
           />
         </svg>
         <span class="">VarsoTower</span>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -73,8 +83,14 @@ content %}
     class="bg-pruslight-300 my-3 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
   >
     <h1 class="font-heading text-4xl">{{_('Details')}}</h1>
-    <p class="">
-      {{_('Praesent et dui non nulla tempus auctor. Nulla facilisi. Sed nisl odio, sodales a dui non, imperdiet viverra urna. Vivamus ipsum nulla, malesuada non lobortis et, eleifend sed tortor. Cras feugiat nunc sapien, ac sodales eros mattis a. Cras consectetur, leo a efficitur aliquet, justo neque pretium mi, nec convallis sem libero sed urna. Donec vitae mauris rutrum, interdum mauris eget, lobortis eros. Maecenas aliquam tellus ac ullamcorper dictum. In mollis odio non tortor ullamcorper, quis pulvinarorci rhoncus. Quisque eu fermentum dolor. Proin dui massa, consectetur accumsan enim a, venenatis tempor magna. In volutpat arcu nec sagittis venenatis eleifend. Nullam at lacus vestibulum, vehicula ligula in, imperdiet dolor. Nullam dictum mauris metus, et tempus diam scelerisque ipsum, sollicitudin varius magna purus quis erat. Proin urna odio, volutpat nec elit convallis, sagittis laoreet ex. Vivamus aliquam congue dapibus. Suspendisse potenti. Nullam molestie ligula quis consequat consectetur. Nam semper, nulla vitae euismod fermentum, odio nibh condimentum augue, at gravida dolor tortor a elit. Maecenas et vestibulum quam. In et faucibus augue, id mollis lectus.')}}'
+    <p class="mb-2">
+      {{_('We are thrilled to announce that')}} <b>{{_('PrusMoot is back, with the second edition taking place this fall!')}}</b>
+    </p>
+    <p class="mb-2">
+      {{_('PrusMoot 2025 invites high school students from across Poland to engage in legal debates, sharpen their public speaking skills, and explore the world of international law. We are proud to be working with a team of experts, judges and legal professionals, providing students with unmatched opportunities to explore different areas of law and gain invaluable experience.')}}'
+    </p>
+    <p class="mb-2">
+      {{_('This year’s edition includes not only the competition itself, but also an official conference, hosting experts from various areas of law as guest speakers. The conference will take place a week prior to the oral rounds of the competition and will be an amazing opportunity for all participants to attend exclusive lectures given by said experts and get an opportunity to meet and talk to them.')}}'
     </p>
   </div>
 

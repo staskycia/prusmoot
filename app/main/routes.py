@@ -88,8 +88,7 @@ def post(id):
 
 @bp.route("/guide")
 def guide():
-    return "Guide will be here!"
-
+    return render_template("guide.html")
 
 from flask import session
 

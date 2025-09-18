@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-14 23:56+0200\n"
+"POT-Creation-Date: 2025-09-18 21:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,57 @@ msgstr ""
 msgid "The PrusMoot Team"
 msgstr ""
 
-#: app/templates/about.html:9 app/templates/about.html:156
+#: app/templates/about.html:9
+msgid ""
+"PrusMoot is brought to life by a dedicated and ambitious organising "
+"committee composed of students from XXXV Bolesław Prus High School. The "
+"committee’s passion for education and student engagement continues to be "
+"the driving force behind the success of PrusMoot."
+msgstr ""
+
+#: app/templates/about.html:12
+msgid ""
+"More so than anything else, we strive to provide accessible opportunities"
+" for more young people, especially those passionate about law. They work "
+"tirelessly: from drafting the fictional case to coordinating logistics "
+"and outreach, to ensure a smooth and enriching experience for every "
+"participant."
+msgstr ""
+
+#: app/templates/about.html:31 app/templates/about.html:49
+#: app/templates/editions/2024.html:114 app/templates/editions/2024.html:115
+msgid "Co-Head of the Organising Committee"
+msgstr ""
+
+#: app/templates/about.html:68 app/templates/editions/2024.html:116
+msgid "Head of Finance"
+msgstr ""
+
+#: app/templates/about.html:84
+msgid "Head of Logistics"
+msgstr ""
+
+#: app/templates/about.html:100
+msgid "Outreach Specialist Male"
+msgstr ""
+
+#: app/templates/about.html:116
+msgid "Outreach Specialist Female"
+msgstr ""
+
+#: app/templates/about.html:132 app/templates/editions/2024.html:120
+msgid "Head of Media"
+msgstr ""
+
+#: app/templates/about.html:150
+msgid "Head of Design"
+msgstr ""
+
+#: app/templates/about.html:157
+msgid "Our school"
+msgstr ""
+
+#: app/templates/about.html:159
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin congue "
 "pharetra mauris, vitae luctus quam bibendum nec. Duis fermentum "
@@ -38,64 +88,32 @@ msgid ""
 "viverra auctor."
 msgstr ""
 
-#: app/templates/about.html:28 app/templates/about.html:46
-msgid "Co-Head of the Organising Committee"
-msgstr ""
-
-#: app/templates/about.html:65
-msgid "Head of Finance"
-msgstr ""
-
-#: app/templates/about.html:81
-msgid "Head of Logistics"
-msgstr ""
-
-#: app/templates/about.html:97
-msgid "Outreach Specialist Male"
-msgstr ""
-
-#: app/templates/about.html:113
-msgid "Outreach Specialist Female"
-msgstr ""
-
-#: app/templates/about.html:129
-msgid "Head of Media"
-msgstr ""
-
-#: app/templates/about.html:147
-msgid "Head of Design"
-msgstr ""
-
-#: app/templates/about.html:154
-msgid "Our school"
-msgstr ""
-
-#: app/templates/base.html:71 app/templates/home.html:1
+#: app/templates/base.html:67 app/templates/home.html:1
 msgid "Home"
 msgstr ""
 
-#: app/templates/base.html:76 app/templates/files.html:1
+#: app/templates/base.html:72 app/templates/files.html:1
 #: app/templates/files.html:7
 msgid "Files"
 msgstr ""
 
-#: app/templates/base.html:81
+#: app/templates/base.html:77
 msgid "News"
 msgstr ""
 
-#: app/templates/base.html:87 app/templates/base.html:106
+#: app/templates/base.html:83 app/templates/base.html:102
 msgid "Editions"
 msgstr ""
 
-#: app/templates/base.html:122
+#: app/templates/base.html:118
 msgid "Abous"
 msgstr ""
 
-#: app/templates/base.html:122
+#: app/templates/base.html:118
 msgid "Us"
 msgstr ""
 
-#: app/templates/base.html:127
+#: app/templates/base.html:123
 msgid "Moot&nbsp;Guide"
 msgstr ""
 
@@ -103,22 +121,416 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
+#: app/templates/editions/2024.html:1 app/templates/editions/2025.html:1
+#: app/templates/guide.html:1
+msgid "Edition"
+msgstr ""
+
+#: app/templates/guide.html:7
+msgid "What is moot?"
+msgstr ""
+
+#: app/templates/guide.html:9
+msgid ""
+"Moot court competition is a simulation of a court hearing, in which "
+"participants represent a given side of a conflict. It is designed for "
+"high school students passionate about law, providing an opportunity for "
+"participants to display their understanding of legal concepts, sharpen "
+"their argumentative and logical thinking abilities, and gain practical "
+"insights by engaging in a mock arbitration from the perspective of legal "
+"practitioners."
+msgstr ""
+
+#: app/templates/guide.html:12
+msgid ""
+"The competition fosters both theoretical and practical legal education, "
+"serving as an excellent way for aspiring future lawyers to immerse "
+"themselves in the field."
+msgstr ""
+
+#: app/templates/guide.html:19
+msgid "Registration"
+msgstr ""
+
+#: app/templates/guide.html:21
+msgid ""
+"The participants compete in groups of two, therefore it is suggested to "
+"register in already chosen pairs."
+msgstr ""
+
+#: app/templates/guide.html:24
+msgid ""
+"In case you do not have a partner, but still want to take part in the "
+"competition, register alone and your partner will be randomly assigned to"
+" you from other students competing alone."
+msgstr ""
+
+#: app/templates/guide.html:31
+msgid "Preparation"
+msgstr ""
+
+#: app/templates/guide.html:33
+msgid ""
+"The dispute is described in the case file, provided by the organisers "
+"after the end of registration. It is usually based on disagreements in "
+"areas of law that are often unsettled and are a subject to international "
+"arguments."
+msgstr ""
+
+#: app/templates/guide.html:40
+msgid "Stage one: memorial writing"
+msgstr ""
+
+#: app/templates/guide.html:42
+msgid ""
+"The first stage of the competition includes memorial (można zrobić jakieś"
+" click on that jak w Wikipedii żeby wiedzieć oddzielnie wytłumaczyć co to"
+" memorial i guess) writing, where participants are required to submit two"
+" written legal briefs - one for each side of the conflict."
+msgstr ""
+
+#: app/templates/guide.html:45
+msgid ""
+"Memorials must present well-structured arguments for both sides of the "
+"case, showcasing the participants’ research, legal reasoning and writing "
+"skills. This phase allows students to delve deeply into the legal issues,"
+" develop persuasive arguments, and demonstrate their understanding of the"
+" case before moving on to the oral rounds."
+msgstr ""
+
+#: app/templates/guide.html:48
+msgid ""
+"After the deadline, when all memorials are submitted, they are assessed "
+"by lawyers, who assign points to each pair. Based on the said evaluation,"
+" 8 pairs will be appointed to compete in the trials."
+msgstr ""
+
+#: app/templates/guide.html:51
+msgid ""
+"After the announcement of the chosen pairs, those participants have "
+"approximately a week for further preparation before the oral stage of the"
+" competition (trials)."
+msgstr ""
+
+#: app/templates/guide.html:54
+msgid "A good memorial"
+msgstr ""
+
+#: app/templates/guide.html:56
+msgid "Addresses all the issues under dispute from the case file"
+msgstr ""
+
+#: app/templates/guide.html:56
+msgid ""
+"remember not to avoid difficult questions and aspects, as it is better to"
+" address them clearly and straightforwardly."
+msgstr ""
+
+#: app/templates/guide.html:57
+msgid "Is clear and comprehensive"
+msgstr ""
+
+#: app/templates/guide.html:57
+msgid ""
+"the arguments supporting your stance should provide precise support of "
+"why the issues from the case file should be decided in favor of your "
+"side."
+msgstr ""
+
+#: app/templates/guide.html:58
+msgid "Must be law-based"
+msgstr ""
+
+#: app/templates/guide.html:58
+msgid ""
+"your reasoning should never be based on speculations regarding the "
+"circumstances of the case. Build your arguments on legal sources, such as"
+" treaties, case law, statutes, etc. By all means avoid using any false, "
+"misrepresented or taken out of context precedents, laws and regulations "
+"(opposing counsel and the judges are very likely to notice)."
+msgstr ""
+
+#: app/templates/guide.html:59
+msgid "Should be written in formal legal language"
+msgstr ""
+
+#: app/templates/guide.html:59
+msgid ""
+"Use formal, legal style, but remember to sound relatively simple and "
+"comprehensible. Keeping the sentences clear and concise will help you "
+"make your arguments easy to follow while remaining grammatically and "
+"linguistically correct. "
+msgstr ""
+
+#: app/templates/guide.html:62
+msgid "Structure"
+msgstr ""
+
+#: app/templates/guide.html:64
+msgid ""
+"There is no one correct format to write your memorials; however, these "
+"are the elements your memorial can/should include."
+msgstr ""
+
+#: app/templates/guide.html:67
+msgid "Cover page"
+msgstr ""
+
+#: app/templates/guide.html:69
+msgid "Clearly identify the claimant and the respondent,"
+msgstr ""
+
+#: app/templates/guide.html:70
+msgid "State your names and the side you represent"
+msgstr ""
+
+#: app/templates/guide.html:74
+msgid "Table of contents"
+msgstr ""
+
+#: app/templates/guide.html:76
+msgid ""
+"Providing the table of contents adds clarity to the structure of the "
+"document, making it easy for the judges to locate different sections"
+msgstr ""
+
+#: app/templates/guide.html:80
+msgid "Bibliography"
+msgstr ""
+
+#: app/templates/guide.html:82
+msgid "All cited sources should be provided, "
+msgstr ""
+
+#: app/templates/guide.html:83
+msgid ""
+"It is important to keep them in consistent citation style throughout the "
+"whole document"
+msgstr ""
+
+#: app/templates/guide.html:87
+msgid "Introduction"
+msgstr ""
+
+#: app/templates/guide.html:89
+msgid "Introduce the main issues of the case,"
+msgstr ""
+
+#: app/templates/guide.html:90
+msgid "Outline the position of the party you are representing"
+msgstr ""
+
+#: app/templates/guide.html:94
+msgid "Statement of Facts"
+msgstr ""
+
+#: app/templates/guide.html:96
+msgid ""
+"Briefly list undisputed facts (e.g. “XYZ are members of the United "
+"Nations subject to the jurisdiction of the International Court of "
+"Justice.”)"
+msgstr ""
+
+#: app/templates/guide.html:97
+msgid "Keep the tone neutral, presenting only relevant facts"
+msgstr ""
+
+#: app/templates/guide.html:101
+msgid "Arguments on jurisdiction"
+msgstr ""
+
+#: app/templates/guide.html:103
+msgid ""
+"Explain why the tribunal has (or does not have) authority to hear the "
+"case."
+msgstr ""
+
+#: app/templates/guide.html:104
+msgid "the claimant: demonstrate the legal basis for jurisdiction"
+msgstr ""
+
+#: app/templates/guide.html:105
+msgid ""
+"the respondent: challenge jurisdiction (if there are valid reasons to do "
+"so)"
+msgstr ""
+
+#: app/templates/guide.html:109
+msgid "Summary of the Arguments"
+msgstr ""
+
+#: app/templates/guide.html:111
+msgid ""
+"Provide concise outlines for your arguments, keeping  the discussed "
+"issues, the laws you use and the conclusions that will be drawn in mind"
+msgstr ""
+
+#: app/templates/guide.html:112
+msgid "Highlight your main points and avoid going into detailed reasoning"
+msgstr ""
+
+#: app/templates/guide.html:116
+msgid "Submissions (as many as there are issues)"
+msgstr ""
+
+#: app/templates/guide.html:118
+msgid "Each issue of the case should be addressed in a separate submission,"
+msgstr ""
+
+#: app/templates/guide.html:119
+msgid ""
+"Issue heading: make sure to highlight which one of the issues is being "
+"tackled in each particular submission."
+msgstr ""
+
+#: app/templates/guide.html:120
+msgid ""
+"Law and application: state your arguments and back them by law: citing "
+"statutes, treaties and other legal documents is just as important as "
+"showing how they apply in this particular case."
+msgstr ""
+
+#: app/templates/guide.html:121
+msgid ""
+"Conclusion: finish each submission with a short summary stating your "
+"side’s position, accentuating how and why it is legally correct"
+msgstr ""
+
+#: app/templates/guide.html:125
+msgid "Request for relief/request to dismiss the lawsuit"
+msgstr ""
+
+#: app/templates/guide.html:127
+msgid "Precisely state what you want the court to do"
+msgstr ""
+
+#: app/templates/guide.html:128
+msgid ""
+"keep the message succinct - the request should be understandable in only "
+"a few sentences"
+msgstr ""
+
+#: app/templates/guide.html:133
+msgid "Useful tips"
+msgstr ""
+
+#: app/templates/guide.html:135
+msgid "Plan before writing"
+msgstr ""
+
+#: app/templates/guide.html:137
+msgid "Outline the main issues,"
+msgstr ""
+
+#: app/templates/guide.html:138
+msgid "break down each one of the problems"
+msgstr ""
+
+#: app/templates/guide.html:139
+msgid ""
+"research the law thoroughly, brainstorming arguments and solutions for "
+"both sides"
+msgstr ""
+
+#: app/templates/guide.html:140
+msgid "outline your arguments"
+msgstr ""
+
+#: app/templates/guide.html:144
+msgid "Balance brevity and detail"
+msgstr ""
+
+#: app/templates/guide.html:146
+msgid ""
+"Judges appreciate clarity. Be detailed where law and reasoning are "
+"essential, but avoid unnecessary digressions"
+msgstr ""
+
+#: app/templates/guide.html:147
+msgid ""
+"remember to avoid casual expressions or rhetorical flourishes that do not"
+" fit legal writing, even while trying to maintain clarity and simplicity "
+"in your writing"
+msgstr ""
+
+#: app/templates/guide.html:151
+msgid "Anticipate counterarguments"
+msgstr ""
+
+#: app/templates/guide.html:153
+msgid "Address likely objections from the other side, strengthening your position"
+msgstr ""
+
+#: app/templates/guide.html:157
+msgid "Always double check your writing"
+msgstr ""
+
+#: app/templates/guide.html:159
+msgid "Revise your memorial multiple times for grammar, flow, and legal accuracy"
+msgstr ""
+
+#: app/templates/guide.html:168
+msgid "Stage two: trials"
+msgstr ""
+
+#: app/templates/guide.html:170
+msgid ""
+"The second stage of moot court competition consists of mock trials, where"
+" the top 16 participants, forming 8 teams, will compete following a "
+"single elimination system."
+msgstr ""
+
+#: app/templates/guide.html:174
+msgid ""
+"Every round, each team will represent either the claimant or the "
+"respondent, presenting their case in front of a panel of judges. The "
+"trials follow a procedure similar to those in real courts:"
+msgstr ""
+
+#: app/templates/guide.html:177
+msgid ""
+"After the judge enters, participants and the judge bow to each other. A "
+"coin is thrown, deciding which side of the conflict will be represented "
+"by each pair."
+msgstr ""
+
+#: app/templates/guide.html:180
+msgid ""
+"The participants are to present their stances and arguments, then to "
+"answer questions from the opposing side and the judge."
+msgstr ""
+
+#: app/templates/guide.html:183
+msgid ""
+"After the court adjourns, the judge delivers some brief assessment and "
+"feedback for each team."
+msgstr ""
+
+#: app/templates/guide.html:186
+msgid ""
+"Engaging in a simulated arbitration hearings, participants will practice "
+"oral advocacy by defending their positions and responding to questions "
+"from the judges. This stage focuses on honing public speaking, critical "
+"thinking, and real-time argumentation skills in a courtroom setting."
+msgstr ""
+
 #: app/templates/home.html:13
-msgid "Lorem"
+msgid "For"
 msgstr ""
 
 #: app/templates/home.html:36
-msgid "ipsum"
+msgid "ambitious"
 msgstr ""
 
 #: app/templates/home.html:39
-msgid "dolor sit amet"
+msgid "students"
 msgstr ""
 
 #: app/templates/home.html:45
 msgid ""
-"Mauris fermentum vehicula felis, vel bibendum urna eleifend vitae. liquam"
-" tristique lacus ac neque fermentum molestie. Nullam quis consequat nulla"
+"with a passion for law, debate, and public speaking, PrusMoot offers a "
+"unique opportunity to step into the shoes of legal advocates and explore "
+"the complexities of international law."
 msgstr ""
 
 #: app/templates/home.html:52
@@ -129,87 +541,186 @@ msgstr ""
 msgid "Learn more"
 msgstr ""
 
-#: app/templates/maintance.html:36
+#: app/templates/maintance.html:37
 msgid "Great things take time. We will be live shortly."
 msgstr ""
 
-#: app/templates/maintance.html:39
+#: app/templates/maintance.html:40
 msgid ""
 "PrusMoot is a moot court competition designated for young law "
 "passionates. This year we are happy to announce the it’s second edition "
 "already!"
 msgstr ""
 
-#: app/templates/editions/2024.html:1 app/templates/editions/2025.html:1
-msgid "Edition"
+#: app/templates/editions/2024.html:9 app/templates/editions/2025.html:9
+msgid "Timeline"
 msgstr ""
 
-#: app/templates/editions/2024.html:70 app/templates/editions/2025.html:75
+#: app/templates/editions/2024.html:11 app/templates/editions/2025.html:11
+msgid "end of registration"
+msgstr ""
+
+#: app/templates/editions/2024.html:12 app/templates/editions/2025.html:12
+msgid "case file made available"
+msgstr ""
+
+#: app/templates/editions/2024.html:13 app/templates/editions/2025.html:13
+msgid "stage 1: memorial deadline"
+msgstr ""
+
+#: app/templates/editions/2024.html:14 app/templates/editions/2025.html:14
+msgid "conference and announcement"
+msgstr ""
+
+#: app/templates/editions/2024.html:15 app/templates/editions/2025.html:15
+msgid "stage 2: quarter and semi-finals"
+msgstr ""
+
+#: app/templates/editions/2024.html:16 app/templates/editions/2025.html:16
+msgid "stage 2: finals"
+msgstr ""
+
+#: app/templates/editions/2024.html:18 app/templates/editions/2025.html:18
+msgid "Venue"
+msgstr ""
+
+#: app/templates/editions/2024.html:18 app/templates/editions/2025.html:18
+msgid "CMS law firm office in Varso Tower"
+msgstr ""
+
+#: app/templates/editions/2024.html:80 app/templates/editions/2025.html:85
 msgid "Details"
 msgstr ""
 
-#: app/templates/editions/2024.html:72 app/templates/editions/2025.html:77
+#: app/templates/editions/2024.html:82
 msgid ""
-"Praesent et dui non nulla tempus auctor. Nulla facilisi. Sed nisl odio, "
-"sodales a dui non, imperdiet viverra urna. Vivamus ipsum nulla, malesuada"
-" non lobortis et, eleifend sed tortor. Cras feugiat nunc sapien, ac "
-"sodales eros mattis a. Cras consectetur, leo a efficitur aliquet, justo "
-"neque pretium mi, nec convallis sem libero sed urna. Donec vitae mauris "
-"rutrum, interdum mauris eget, lobortis eros. Maecenas aliquam tellus ac "
-"ullamcorper dictum. In mollis odio non tortor ullamcorper, quis "
-"pulvinarorci rhoncus. Quisque eu fermentum dolor. Proin dui massa, "
-"consectetur accumsan enim a, venenatis tempor magna. In volutpat arcu nec"
-" sagittis venenatis eleifend. Nullam at lacus vestibulum, vehicula ligula"
-" in, imperdiet dolor. Nullam dictum mauris metus, et tempus diam "
-"scelerisque ipsum, sollicitudin varius magna purus quis erat. Proin urna "
-"odio, volutpat nec elit convallis, sagittis laoreet ex. Vivamus aliquam "
-"congue dapibus. Suspendisse potenti. Nullam molestie ligula quis "
-"consequat consectetur. Nam semper, nulla vitae euismod fermentum, odio "
-"nibh condimentum augue, at gravida dolor tortor a elit. Maecenas et "
-"vestibulum quam. In et faucibus augue, id mollis lectus."
+"PrusMoot 2024 brought together passionate high school students from "
+"across Poland for a dynamic and a surely enriching experience. The trials"
+" offered participants the chance to engage in legal debates, develop "
+"their advocacy skills, and dive into complex issues of international law."
 msgstr ""
 
-#: app/templates/editions/2024.html:78
+#: app/templates/editions/2024.html:85
+msgid ""
+"In addition to the competition itself, the 2024 edition featured a series"
+" of webinars held online in May 2024. These sessions covered a range of "
+"legal topics and allowed students to interact directly with practicing "
+"lawyers, academics, and judges. The webinars provided an accessible and "
+"enriching way for participants to deepen their understanding of the "
+"profession of a lawyers and prepare for the competition."
+msgstr ""
+
+#: app/templates/editions/2024.html:89
+msgid "1st place"
+msgstr ""
+
+#: app/templates/editions/2024.html:89 app/templates/editions/2024.html:92
+msgid "and"
+msgstr ""
+
+#: app/templates/editions/2024.html:92
+msgid "2nd place"
+msgstr ""
+
+#: app/templates/editions/2024.html:96
+msgid ""
+"The 2024 edition of PrusMoot concluded with an exciting final round that "
+"showcased the exceptional talent and dedication of participating teams. "
+msgstr ""
+
+#: app/templates/editions/2024.html:103
+msgid "Partners & Sponsors"
+msgstr ""
+
+#: app/templates/editions/2024.html:105
+msgid ""
+"PrusMoot 2024 was made possible thanks to the generous support of our "
+"sponsors and institutional partners. We are proud to have collaborated "
+"with CMS Law Firm, Salvar Law Firm, Youth Council of Warsaw, SAMSUNG - "
+"Solve for Tommorow, as well as Club of Catholic Intelligentsia"
+msgstr ""
+
+#: app/templates/editions/2024.html:112
+msgid "Organising Committee"
+msgstr ""
+
+#: app/templates/editions/2024.html:117 app/templates/editions/2024.html:118
+msgid "Outreach Specialist"
+msgstr ""
+
+#: app/templates/editions/2024.html:119
+msgid "Head of Desing"
+msgstr ""
+
+#: app/templates/editions/2024.html:127
 msgid "Archive"
 msgstr ""
 
-#: app/templates/editions/2024.html:80
+#: app/templates/editions/2024.html:129
 msgid "Files from this editions are available for download"
 msgstr ""
 
-#: app/templates/editions/2024.html:84
+#: app/templates/editions/2024.html:133
 msgid "here"
 msgstr ""
 
-#: app/templates/editions/2025.html:84
-msgid "How to start?"
+#: app/templates/editions/2025.html:87
+msgid "We are thrilled to announce that"
 msgstr ""
 
-#: app/templates/editions/2025.html:86
-msgid "If you are new to moot, check out our"
+#: app/templates/editions/2025.html:87
+msgid "PrusMoot is back, with the second edition taking place this fall!"
 msgstr ""
 
 #: app/templates/editions/2025.html:90
+msgid ""
+"PrusMoot 2025 invites high school students from across Poland to engage "
+"in legal debates, sharpen their public speaking skills, and explore the "
+"world of international law. We are proud to be working with a team of "
+"experts, judges and legal professionals, providing students with "
+"unmatched opportunities to explore different areas of law and gain "
+"invaluable experience."
+msgstr ""
+
+#: app/templates/editions/2025.html:93
+msgid ""
+"This year’s edition includes not only the competition itself, but also an"
+" official conference, hosting experts from various areas of law as guest "
+"speakers. The conference will take place a week prior to the oral rounds "
+"of the competition and will be an amazing opportunity for all "
+"participants to attend exclusive lectures given by said experts and get "
+"an opportunity to meet and talk to them."
+msgstr ""
+
+#: app/templates/editions/2025.html:100
+msgid "How to start?"
+msgstr ""
+
+#: app/templates/editions/2025.html:102
+msgid "If you are new to moot, check out our"
+msgstr ""
+
+#: app/templates/editions/2025.html:106
 msgid "guide"
 msgstr ""
 
-#: app/templates/editions/2025.html:95
+#: app/templates/editions/2025.html:111
 msgid "Register yourself via"
 msgstr ""
 
-#: app/templates/editions/2025.html:105
+#: app/templates/editions/2025.html:121
 msgid "Discover"
 msgstr ""
 
-#: app/templates/editions/2025.html:109
+#: app/templates/editions/2025.html:125
 msgid "files"
 msgstr ""
 
-#: app/templates/editions/2025.html:111
+#: app/templates/editions/2025.html:127
 msgid "and latest"
 msgstr ""
 
-#: app/templates/editions/2025.html:115
+#: app/templates/editions/2025.html:131
 msgid "news"
 msgstr ""
 

@@ -1,0 +1,190 @@
+{% extends "base.html" %} {% block title %}{{_('Edition')}} 2025{% endblock %} {% block
+content %}
+<main class="mx-auto mt-5 w-[90%]">
+    <div
+        class="bg-pruslight-300 my-3 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
+    >
+        <h1 class="font-heading text-4xl">{{_('What is moot?')}}</h1>
+        <p class="mb-2">
+        {{_('Moot court competition is a simulation of a court hearing, in which participants represent a given side of a conflict. It is designed for high school students passionate about law, providing an opportunity for participants to display their understanding of legal concepts, sharpen their argumentative and logical thinking abilities, and gain practical insights by engaging in a mock arbitration from the perspective of legal practitioners.')}}
+        </p>
+        <p class="mb-2">
+        {{_('The competition fosters both theoretical and practical legal education, serving as an excellent way for aspiring future lawyers to immerse themselves in the field.')}}
+        </p>
+    </div>
+
+    <div
+        class="bg-pruslight-300 my-3 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
+    >
+        <h1 class="font-heading text-4xl">{{_('Registration')}}</h1>
+        <p class="mb-2">
+        {{_('The participants compete in groups of two, therefore it is suggested to register in already chosen pairs.')}}
+        </p>
+        <p class="mb-2">
+        {{_('In case you do not have a partner, but still want to take part in the competition, register alone and your partner will be randomly assigned to you from other students competing alone.')}}
+        </p>
+    </div>
+
+    <div
+        class="bg-pruslight-300 my-3 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
+    >
+        <h1 class="font-heading text-4xl">{{_('Preparation')}}</h1>
+        <p class="mb-2">
+        {{_('The dispute is described in the case file, provided by the organisers after the end of registration. It is usually based on disagreements in areas of law that are often unsettled and are a subject to international arguments.')}}
+        </p>
+    </div>
+
+    <div
+        class="bg-pruslight-300 my-3 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
+    >
+        <h1 class="font-heading text-4xl">{{_('Stage one: memorial writing')}}</h1>
+        <p class="mb-2">
+        {{_('The first stage of the competition includes memorial (można zrobić jakieś click on that jak w Wikipedii żeby wiedzieć oddzielnie wytłumaczyć co to memorial i guess) writing, where participants are required to submit two written legal briefs - one for each side of the conflict.')}}
+        </p>
+        <p class="mb-2">
+        {{_('Memorials must present well-structured arguments for both sides of the case, showcasing the participants’ research, legal reasoning and writing skills. This phase allows students to delve deeply into the legal issues, develop persuasive arguments, and demonstrate their understanding of the case before moving on to the oral rounds.')}}
+        </p>
+        <p class="mb-2">
+        {{_('After the deadline, when all memorials are submitted, they are assessed by lawyers, who assign points to each pair. Based on the said evaluation, 8 pairs will be appointed to compete in the trials.')}}
+        </p>
+        <p class="mb-2">
+        {{_('After the announcement of the chosen pairs, those participants have approximately a week for further preparation before the oral stage of the competition (trials).')}}
+        </p>
+
+        <h2 class="font-heading text-2xl">{{_('A good memorial')}}:</h2>
+        <ul class="list-disc list-inside">
+            <li class="mb-1"><b>{{_('Addresses all the issues under dispute from the case file')}}: </b>{{_('remember not to avoid difficult questions and aspects, as it is better to address them clearly and straightforwardly.')}}</li>
+            <li class="mb-1"><b>{{_('Is clear and comprehensive')}}: </b>{{_('the arguments supporting your stance should provide precise support of why the issues from the case file should be decided in favor of your side.')}}</li>
+            <li class="mb-1"><b>{{_('Must be law-based')}}: </b>{{_('your reasoning should never be based on speculations regarding the circumstances of the case. Build your arguments on legal sources, such as treaties, case law, statutes, etc. By all means avoid using any false, misrepresented or taken out of context precedents, laws and regulations (opposing counsel and the judges are very likely to notice).')}}</li>
+            <li class="mb-1"><b>{{_('Should be written in formal legal language')}}: </b>{{_('Use formal, legal style, but remember to sound relatively simple and comprehensible. Keeping the sentences clear and concise will help you make your arguments easy to follow while remaining grammatically and linguistically correct. ')}}</li>
+        </ul><br/>
+
+        <h2 class="font-heading text-2xl">{{_('Structure')}}:</h2>
+        <p class="mb-2">
+        {{_('There is no one correct format to write your memorials; however, these are the elements your memorial can/should include.')}}
+        </p>
+        <ol class="list-decimal list-inside">
+            <li class="mb-1"><b>{{_('Cover page')}}: </b>
+                <ul class="list-disc list-inside">
+                    <li class="mb-1 ml-2">{{_('Clearly identify the claimant and the respondent,')}}</li>
+                    <li class="mb-1 ml-2">{{_('State your names and the side you represent')}}</li>
+                </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Table of contents')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Providing the table of contents adds clarity to the structure of the document, making it easy for the judges to locate different sections')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Bibliography')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('All cited sources should be provided, ')}}</li>
+                <li class="mb-1 ml-2">{{_('It is important to keep them in consistent citation style throughout the whole document')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Introduction')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Introduce the main issues of the case,')}}</li>
+                <li class="mb-1 ml-2">{{_('Outline the position of the party you are representing')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Statement of Facts')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Briefly list undisputed facts (e.g. “XYZ are members of the United Nations subject to the jurisdiction of the International Court of Justice.”)')}}</li>
+                <li class="mb-1 ml-2">{{_('Keep the tone neutral, presenting only relevant facts')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Arguments on jurisdiction')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Explain why the tribunal has (or does not have) authority to hear the case.')}}</li>
+                <li class="mb-1 ml-2">{{_('the claimant: demonstrate the legal basis for jurisdiction')}}</li>
+                <li class="mb-1 ml-2">{{_('the respondent: challenge jurisdiction (if there are valid reasons to do so)')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Summary of the Arguments')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Provide concise outlines for your arguments, keeping  the discussed issues, the laws you use and the conclusions that will be drawn in mind')}}</li>
+                <li class="mb-1 ml-2">{{_('Highlight your main points and avoid going into detailed reasoning')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Submissions (as many as there are issues)')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Each issue of the case should be addressed in a separate submission,')}}</li>
+                <li class="mb-1 ml-2">{{_('Issue heading: make sure to highlight which one of the issues is being tackled in each particular submission.')}}</li>
+                <li class="mb-1 ml-2">{{_('Law and application: state your arguments and back them by law: citing statutes, treaties and other legal documents is just as important as showing how they apply in this particular case.')}}</li>
+                <li class="mb-1 ml-2">{{_('Conclusion: finish each submission with a short summary stating your side’s position, accentuating how and why it is legally correct')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Request for relief/request to dismiss the lawsuit')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Precisely state what you want the court to do')}}</li>
+                <li class="mb-1 ml-2">{{_('keep the message succinct - the request should be understandable in only a few sentences')}}</li>
+            </ul>
+            </li>
+        </ol>
+
+        <h2 class="font-heading text-2xl">{{_('Useful tips')}}:</h2>
+        <ol class="list-decimal list-inside">
+            <li class="mb-1"><b>{{_('Plan before writing')}}: </b>
+                <ul class="list-disc list-inside">
+                    <li class="mb-1 ml-2">{{_('Outline the main issues,')}}</li>
+                    <li class="mb-1 ml-2">{{_('break down each one of the problems')}}</li>
+                    <li class="mb-1 ml-2">{{_('research the law thoroughly, brainstorming arguments and solutions for both sides')}}</li>
+                    <li class="mb-1 ml-2">{{_('outline your arguments')}}</li>
+                </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Balance brevity and detail')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Judges appreciate clarity. Be detailed where law and reasoning are essential, but avoid unnecessary digressions')}}</li>
+                <li class="mb-1 ml-2">{{_('remember to avoid casual expressions or rhetorical flourishes that do not fit legal writing, even while trying to maintain clarity and simplicity in your writing')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Anticipate counterarguments')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Address likely objections from the other side, strengthening your position')}}</li>
+            </ul>
+            </li>
+
+            <li class="mb-1"><b>{{_('Always double check your writing')}}: </b>
+            <ul class="list-disc list-inside">
+                <li class="mb-1 ml-2">{{_('Revise your memorial multiple times for grammar, flow, and legal accuracy')}}</li>
+            </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div
+        class="bg-pruslight-300 my-3 rounded-md p-4 shadow-[0px_5px_15px_-3px_rgba(0,_0,_0,_0.05)]"
+    >
+        <h1 class="font-heading text-4xl">{{_('Stage two: trials')}}</h1>
+        <p class="mb-2">
+        {{_('The second stage of moot court competition consists of mock trials, where the top 16 participants, forming 8 teams, will compete following a single elimination system.')}}
+        </p>
+        <img src="{{url_for('static', filename='img/bracket.png')}}" alt="" class="">
+        <p class="mb-2">
+        {{_('Every round, each team will represent either the claimant or the respondent, presenting their case in front of a panel of judges. The trials follow a procedure similar to those in real courts:')}}
+        </p>
+        <p class="mb-2">
+        {{_('After the judge enters, participants and the judge bow to each other. A coin is thrown, deciding which side of the conflict will be represented by each pair.')}}
+        </p>
+        <p class="mb-2">
+        {{_('The participants are to present their stances and arguments, then to answer questions from the opposing side and the judge.')}}
+        </p>
+        <p class="mb-2">
+        {{_('After the court adjourns, the judge delivers some brief assessment and feedback for each team.')}}
+        </p>
+        <p class="mb-2">
+        {{_('Engaging in a simulated arbitration hearings, participants will practice oral advocacy by defending their positions and responding to questions from the judges. This stage focuses on honing public speaking, critical thinking, and real-time argumentation skills in a courtroom setting.')}}
+        </p>
+    </div>
+</main>
+{% endblock %}
