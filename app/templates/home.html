@@ -10,12 +10,16 @@
   <div class="relative z-10">
     <div class="text-center">
       <h1 class="~sm/lg:~text-6xl/9xl font-hero mx-auto leading-[1.1]">
-        {{_('For')}}
+        {{_('A')}}
         <span
           class="text-prusdark-400 stroke-prusdark-100 relative whitespace-nowrap"
         >
           <svg
-            class="absolute left-[-2.5rem] top-[-2rem] z-[-1] w-[115%]"
+            {% if get_locale() == 'en' %}
+            class="absolute left-[-2.5rem] top-[4.5rem] z-[-1] w-[115%]"
+            {% else %}
+            class="absolute left-[-2.5rem] top-[-3rem] z-[-1] w-[115%]"
+            {% endif %}
             xmlns="http://www.w3.org/2000/svg"
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
@@ -26,23 +30,29 @@
             <path
               d="M21.984777450561523,282.8259582519531C85.03125985463461,267.1390380859375,364.70665073394775,187.06104532877603,400.263671875,188.70443725585938C435.82069301605225,190.34782918294272,188.56494140625,280.88376871744794,235.326904296875,292.6863098144531C282.0888671875,304.4888509114583,606.5840250651041,265.0474548339844,680.83544921875,259.5196838378906"
               fill="none"
+              {% if get_locale() == 'en' %}
+              stroke-width="15"
+              {% else %}
               stroke-width="10"
+              {% endif %}
               stroke-linecap="round"
               transform="matrix(1,0,0,1,48.58989906311035,-41.778953552246094)"
               stroke-opacity="1"
             ></path>
             <defs></defs>
           </svg>
-          <span class="relaitive">{{_('ambitious')}}</span>
+          <span class="relaitive">{{_('law')}}</span>
         </span>
         <br />
-        {{_('students')}}
+        {% if get_locale() == 'en' %}
+        {{_('competition')}}
+        {% endif %}
       </h1>
     </div>
     <p
       class="~text-[0.75rem]/[1rem] mx-auto mt-3 w-[35rem] max-md:w-[30rem] max-sm:w-[20rem]"
     >
-      {{_('with a passion for law, debate, and public speaking, PrusMoot offers a unique opportunity to step into the shoes of legal advocates and explore the complexities of international law.')}}
+      {{_('for ambitious students with a passion for debate and public speaking, PrusMoot offers a unique opportunity to step into the shoes of legal advocates and explore the complexities of international law.')}}
     </p>
     <div class="row mt-12 flex justify-center gap-5">
       <a
@@ -58,7 +68,7 @@
       >
     </div>
   </div>
-  <div class="absolute bottom-0 mt-5 w-full py-4 text-center">
+  <!-- <div class="absolute bottom-0 mt-5 w-full py-4 text-center">
     <div
       class="mt-3 flex w-full flex-row flex-nowrap items-center justify-center opacity-55"
     >
@@ -68,7 +78,7 @@
         class="~h-16/24 w-auto"
       ></object>
     </div>
-  </div>
+  </div> -->
 </div>
 <style>
   .coverbg {

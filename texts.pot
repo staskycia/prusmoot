@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-18 21:34+0200\n"
+"POT-Creation-Date: 2025-09-19 23:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -515,22 +515,22 @@ msgid ""
 msgstr ""
 
 #: app/templates/home.html:13
-msgid "For"
+msgid "A"
 msgstr ""
 
 #: app/templates/home.html:36
-msgid "ambitious"
+msgid "law"
 msgstr ""
 
 #: app/templates/home.html:39
-msgid "students"
+msgid "competition"
 msgstr ""
 
 #: app/templates/home.html:45
 msgid ""
-"with a passion for law, debate, and public speaking, PrusMoot offers a "
-"unique opportunity to step into the shoes of legal advocates and explore "
-"the complexities of international law."
+"for ambitious students with a passion for debate and public speaking, "
+"PrusMoot offers a unique opportunity to step into the shoes of legal "
+"advocates and explore the complexities of international law."
 msgstr ""
 
 #: app/templates/home.html:52

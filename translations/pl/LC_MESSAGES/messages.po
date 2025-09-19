@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-18 21:34+0200\n"
+"POT-Creation-Date: 2025-09-19 23:00+0200\n"
 "PO-Revision-Date: 2025-09-06 21:16+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pl\n"
@@ -266,7 +266,9 @@ msgstr "Odnosi się do wszystkich spornych kwestii zawartych w aktach sprawy"
 msgid ""
 "remember not to avoid difficult questions and aspects, as it is better to"
 " address them clearly and straightforwardly."
-msgstr "pamiętaj, aby nie unikać trudnych pytań i aspektów, gdyż lepiej jest odnieść się do nich w sposób jasny i bezpośredni."
+msgstr ""
+"pamiętaj, aby nie unikać trudnych pytań i aspektów, gdyż lepiej jest "
+"odnieść się do nich w sposób jasny i bezpośredni."
 
 #: app/templates/guide.html:57
 msgid "Is clear and comprehensive"
@@ -277,7 +279,10 @@ msgid ""
 "the arguments supporting your stance should provide precise support of "
 "why the issues from the case file should be decided in favor of your "
 "side."
-msgstr "argumenty uzasadniające Twoje stanowisko powinny precyzyjnie uzasadniać, dlaczego kwestie zawarte w aktach sprawy powinny zostać rozstrzygnięte na Twoją korzyść."
+msgstr ""
+"argumenty uzasadniające Twoje stanowisko powinny precyzyjnie uzasadniać, "
+"dlaczego kwestie zawarte w aktach sprawy powinny zostać rozstrzygnięte na"
+" Twoją korzyść."
 
 #: app/templates/guide.html:58
 msgid "Must be law-based"
@@ -290,7 +295,13 @@ msgid ""
 " treaties, case law, statutes, etc. By all means avoid using any false, "
 "misrepresented or taken out of context precedents, laws and regulations "
 "(opposing counsel and the judges are very likely to notice)."
-msgstr "Twoje rozumowanie nigdy nie powinno opierać się na spekulacjach dotyczących okoliczności sprawy. Opieraj swoje argumenty na źródłach prawnych, takich jak traktaty, ustawy itp. Za wszelką cenę unikaj wykorzystywania nieprawdziwych, przeinaczonych lub wyrwanych z kontekstu precedensów, przepisów i regulacji (przeciwna strona i sędziowie prawdopodobnie to zauważą)."
+msgstr ""
+"Twoje rozumowanie nigdy nie powinno opierać się na spekulacjach "
+"dotyczących okoliczności sprawy. Opieraj swoje argumenty na źródłach "
+"prawnych, takich jak traktaty, ustawy itp. Za wszelką cenę unikaj "
+"wykorzystywania nieprawdziwych, przeinaczonych lub wyrwanych z kontekstu "
+"precedensów, przepisów i regulacji (przeciwna strona i sędziowie "
+"prawdopodobnie to zauważą)."
 
 #: app/templates/guide.html:59
 msgid "Should be written in formal legal language"
@@ -302,7 +313,11 @@ msgid ""
 "comprehensible. Keeping the sentences clear and concise will help you "
 "make your arguments easy to follow while remaining grammatically and "
 "linguistically correct. "
-msgstr "używaj formalnego stylu prawniczego, ale pamiętaj, aby brzmieć stosunkowo prosto i zrozumiale. Zwięzłe i jasne zdania pomogą Ci uczynić Twoje argumenty łatwymi do zrozumienia, pozostając jednocześnie poprawnymi gramatycznie."
+msgstr ""
+"używaj formalnego stylu prawniczego, ale pamiętaj, aby brzmieć stosunkowo"
+" prosto i zrozumiale. Zwięzłe i jasne zdania pomogą Ci uczynić Twoje "
+"argumenty łatwymi do zrozumienia, pozostając jednocześnie poprawnymi "
+"gramatycznie."
 
 #: app/templates/guide.html:62
 msgid "Structure"
@@ -312,7 +327,9 @@ msgstr "Struktura"
 msgid ""
 "There is no one correct format to write your memorials; however, these "
 "are the elements your memorial can/should include."
-msgstr "Nie ma jednego prawidłowego formatu pisania pism procesowych, jednak poniżej przedstawiono elementy, które mogą/powinny się w nich znaleźć."
+msgstr ""
+"Nie ma jednego prawidłowego formatu pisania pism procesowych, jednak "
+"poniżej przedstawiono elementy, które mogą/powinny się w nich znaleźć."
 
 #: app/templates/guide.html:67
 msgid "Cover page"
@@ -334,7 +351,9 @@ msgstr "Spis treści"
 msgid ""
 "Providing the table of contents adds clarity to the structure of the "
 "document, making it easy for the judges to locate different sections"
-msgstr "Podanie spisu treści pomaga zachować przejrzystość dokumentu, ułatwiając sędziom odnalezienie poszczególnych sekcji"
+msgstr ""
+"Podanie spisu treści pomaga zachować przejrzystość dokumentu, ułatwiając "
+"sędziom odnalezienie poszczególnych sekcji"
 
 #: app/templates/guide.html:80
 msgid "Bibliography"
@@ -371,7 +390,10 @@ msgid ""
 "Briefly list undisputed facts (e.g. “XYZ are members of the United "
 "Nations subject to the jurisdiction of the International Court of "
 "Justice.”)"
-msgstr "Krótko wymień bezsporne fakty (np. „XYZ są członkami Organizacji Narodów Zjednoczonych podlegającymi jurysdykcji Międzynarodowego Trybunału Sprawiedliwości”)"
+msgstr ""
+"Krótko wymień bezsporne fakty (np. „XYZ są członkami Organizacji Narodów "
+"Zjednoczonych podlegającymi jurysdykcji Międzynarodowego Trybunału "
+"Sprawiedliwości”)"
 
 #: app/templates/guide.html:97
 msgid "Keep the tone neutral, presenting only relevant facts"
@@ -385,7 +407,9 @@ msgstr "Argumenty dotyczące jurysdykcji"
 msgid ""
 "Explain why the tribunal has (or does not have) authority to hear the "
 "case."
-msgstr "Wyjaśnij, dlaczego trybunał ma (lub nie ma) uprawnienia do rozpatrzenia sprawy"
+msgstr ""
+"Wyjaśnij, dlaczego trybunał ma (lub nie ma) uprawnienia do rozpatrzenia "
+"sprawy"
 
 #: app/templates/guide.html:104
 msgid "the claimant: demonstrate the legal basis for jurisdiction"
@@ -395,7 +419,9 @@ msgstr "Powód: przedstaw podstawę prawną jurysdykcji"
 msgid ""
 "the respondent: challenge jurisdiction (if there are valid reasons to do "
 "so)"
-msgstr "Pozwany: zakwestionuj jurysdykcję (jeśli istnieją ku temu uzasadnione powody)"
+msgstr ""
+"Pozwany: zakwestionuj jurysdykcję (jeśli istnieją ku temu uzasadnione "
+"powody)"
 
 #: app/templates/guide.html:109
 msgid "Summary of the Arguments"
@@ -405,7 +431,10 @@ msgstr "Podsumowanie argumentów"
 msgid ""
 "Provide concise outlines for your arguments, keeping  the discussed "
 "issues, the laws you use and the conclusions that will be drawn in mind"
-msgstr "Przedstaw zwięzły zarys swoich argumentów, pamiętając o omawianych później kwestiach, stosowanych przepisach i wnioskach, które zostaną wyciągnięte"
+msgstr ""
+"Przedstaw zwięzły zarys swoich argumentów, pamiętając o omawianych "
+"później kwestiach, stosowanych przepisach i wnioskach, które zostaną "
+"wyciągnięte"
 
 #: app/templates/guide.html:112
 msgid "Highlight your main points and avoid going into detailed reasoning"
@@ -423,20 +452,29 @@ msgstr "Każda kwestia sporna powinna być poruszona w oddzielnym wniosku"
 msgid ""
 "Issue heading: make sure to highlight which one of the issues is being "
 "tackled in each particular submission."
-msgstr "Nagłówek: należy podkreślić, która z kwestii spornych jest poruszana w danym wniosku"
+msgstr ""
+"Nagłówek: należy podkreślić, która z kwestii spornych jest poruszana w "
+"danym wniosku"
 
 #: app/templates/guide.html:120
 msgid ""
 "Law and application: state your arguments and back them by law: citing "
 "statutes, treaties and other legal documents is just as important as "
 "showing how they apply in this particular case."
-msgstr "Prawo i zastosowanie: należy przedstawić swoje argumenty i poprzeć je przepisami prawa: cytowanie ustaw, traktatów i innych dokumentów prawnych jest równie ważne, jak wykazanie, w jaki sposób mają one zastosowanie w danej sprawie"
+msgstr ""
+"Prawo i zastosowanie: należy przedstawić swoje argumenty i poprzeć je "
+"przepisami prawa: cytowanie ustaw, traktatów i innych dokumentów prawnych"
+" jest równie ważne, jak wykazanie, w jaki sposób mają one zastosowanie w "
+"danej sprawie"
 
 #: app/templates/guide.html:121
 msgid ""
 "Conclusion: finish each submission with a short summary stating your "
 "side’s position, accentuating how and why it is legally correct"
-msgstr "Wnioski: zakończ każde pismo krótkim podsumowaniem przedstawiającym stanowisko swojej strony, podkreślając, w jaki sposób i dlaczego jest ono zgodne z prawem"
+msgstr ""
+"Wnioski: zakończ każde pismo krótkim podsumowaniem przedstawiającym "
+"stanowisko swojej strony, podkreślając, w jaki sposób i dlaczego jest ono"
+" zgodne z prawem"
 
 #: app/templates/guide.html:125
 msgid "Request for relief/request to dismiss the lawsuit"
@@ -450,7 +488,9 @@ msgstr "Dokładnie określ, czego oczekujesz od sądu"
 msgid ""
 "keep the message succinct - the request should be understandable in only "
 "a few sentences"
-msgstr "Postaraj się, aby treść była zwięzła – wniosek powinien być zrozumiały w kilku zdaniach."
+msgstr ""
+"Postaraj się, aby treść była zwięzła – wniosek powinien być zrozumiały w "
+"kilku zdaniach."
 
 #: app/templates/guide.html:133
 msgid "Useful tips"
@@ -472,7 +512,9 @@ msgstr "rozłóż każdy z problemów na czynniki pierwsze,"
 msgid ""
 "research the law thoroughly, brainstorming arguments and solutions for "
 "both sides"
-msgstr "dokładnie zapoznaj się z przepisami prawa, szukając argumentów i rozwiązań dla obu stron,"
+msgstr ""
+"dokładnie zapoznaj się z przepisami prawa, szukając argumentów i "
+"rozwiązań dla obu stron,"
 
 #: app/templates/guide.html:140
 msgid "outline your arguments"
@@ -486,22 +528,29 @@ msgstr "Zachowaj równowagę między zwięzłością a szczegółowością"
 msgid ""
 "Judges appreciate clarity. Be detailed where law and reasoning are "
 "essential, but avoid unnecessary digressions"
-msgstr "Sędziowie cenią sobie jasność. Bądź szczegółowy tam, gdzie prawo i rozumowanie są istotne, ale unikaj niepotrzebnych dygresji"
+msgstr ""
+"Sędziowie cenią sobie jasność. Bądź szczegółowy tam, gdzie prawo i "
+"rozumowanie są istotne, ale unikaj niepotrzebnych dygresji"
 
 #: app/templates/guide.html:147
 msgid ""
 "remember to avoid casual expressions or rhetorical flourishes that do not"
 " fit legal writing, even while trying to maintain clarity and simplicity "
 "in your writing"
-msgstr "Pamiętaj, aby unikać swobodnych wyrażeń lub retorycznych ozdobników, które nie pasują do tekstów prawniczych, nawet jeśli starasz się zachować jasność i prostotę swojego tekstu"
+msgstr ""
+"Pamiętaj, aby unikać swobodnych wyrażeń lub retorycznych ozdobników, "
+"które nie pasują do tekstów prawniczych, nawet jeśli starasz się zachować"
+" jasność i prostotę swojego tekstu"
 
 #: app/templates/guide.html:151
-msgid "Przewiduj kontrargumenty"
+msgid "Anticipate counterarguments"
 msgstr ""
 
 #: app/templates/guide.html:153
 msgid "Address likely objections from the other side, strengthening your position"
-msgstr "Odpowiedz na prawdopodobne zastrzeżenia drugiej strony, wzmacniając swoją pozycję"
+msgstr ""
+"Odpowiedz na prawdopodobne zastrzeżenia drugiej strony, wzmacniając swoją"
+" pozycję"
 
 #: app/templates/guide.html:157
 msgid "Always double check your writing"
@@ -509,7 +558,10 @@ msgstr "Zawsze dokładnie sprawdzaj swój tekst"
 
 #: app/templates/guide.html:159
 msgid "Revise your memorial multiple times for grammar, flow, and legal accuracy"
-msgstr "Kilkakrotnie przeczytaj dokument, sprawdzając go nie tylko pod kątem poprawności argumentów i rozumowania, ale też pod kątem gramatyki, płynności i poprawności prawnej."
+msgstr ""
+"Kilkakrotnie przeczytaj dokument, sprawdzając go nie tylko pod kątem "
+"poprawności argumentów i rozumowania, ale też pod kątem gramatyki, "
+"płynności i poprawności prawnej."
 
 #: app/templates/guide.html:168
 msgid "Stage two: trials"
@@ -575,24 +627,24 @@ msgstr ""
 "w warunkach sali sądowej."
 
 #: app/templates/home.html:13
-msgid "For"
-msgstr "Dla"
+msgid "A"
+msgstr "Konkurs"
 
 #: app/templates/home.html:36
-msgid "ambitious"
-msgstr "ambitnych"
+msgid "law"
+msgstr "prawniczy"
 
 #: app/templates/home.html:39
-msgid "students"
-msgstr "uczniów"
+msgid "competition"
+msgstr ""
 
 #: app/templates/home.html:45
 msgid ""
-"with a passion for law, debate, and public speaking, PrusMoot offers a "
-"unique opportunity to step into the shoes of legal advocates and explore "
-"the complexities of international law."
+"for ambitious students with a passion for debate and public speaking, "
+"PrusMoot offers a unique opportunity to step into the shoes of legal "
+"advocates and explore the complexities of international law."
 msgstr ""
-"interesujących się prawem, debatami i wystąpieniami publicznymi. Konkurs "
+"dla ambitnych uczniów interesujących się debatami i wystąpieniami publicznymi. Konkurs "
 "stanowi wyjątkową okazję by wcielić się w rolę prawników i zgłębić "
 "zawiłości prawa międzynarodowego."
 
@@ -892,4 +944,16 @@ msgstr "aktualności"
 #~ "vestibulum quam. In et faucibus augue,"
 #~ " id mollis lectus."
 #~ msgstr "Bardzo bardzo długi polski tekst"
+
+#~ msgid "Przewiduj kontrargumenty"
+#~ msgstr ""
+
+#~ msgid "For"
+#~ msgstr "Dla"
+
+#~ msgid "ambitious"
+#~ msgstr "ambitnych"
+
+#~ msgid "students"
+#~ msgstr "uczniów"
 
