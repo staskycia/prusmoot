@@ -9,3 +9,4 @@ tailwind.config.js
 lipsum.txt
 venv
 .env
+app/uploaded_files
