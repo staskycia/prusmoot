@@ -117,15 +117,15 @@ Disallow: /admin/*
 """
     return Response(content, mimetype="text/plain")
 
-def maintenance():
-    if request.path in ["/robots.txt"] or request.path.startswith("/static/"):
-        return None
+# def maintenance():
+#     if request.path in ["/robots.txt"] or request.path.startswith("/static/"):
+#         return None
     
-    if not current_user.is_authenticated:
-        return render_template("maintance.html")
+#     if not current_user.is_authenticated:
+#         return render_template("maintance.html")
 
-@bp.before_request
-def before():
-    rsp = maintenance()
-    if rsp:
-        return rsp
+# @bp.before_request
+# def before():
+#     rsp = maintenance()
+#     if rsp:
+#         return rsp
