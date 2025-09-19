@@ -1,4 +1,4 @@
-from flask import render_template, url_for, request, get_flashed_messages, flash, redirect
+from flask import render_template, url_for, request, get_flashed_messages, flash, redirect, current_app
 from app.auth import bp
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, current_user, logout_user
@@ -17,6 +17,7 @@ def login():
             return render_template("auth/login.html")
         user = User.query.filter_by(email=email.lower()).first()
         if user and check_password_hash(user.password, password):
+            current_app.logger.info(f"{user.first_name} {user.last_name} ({user.id}) logged in from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
             login_user(user, remember=True)
             return redirect(url_for("panel.home"))
         else:
@@ -26,6 +27,7 @@ def login():
 @bp.route("/logout")
 @login_required
 def logout():
+    current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) logged out from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
     logout_user()
     flash("You were securely logged out!", "success")
     return redirect("login")
@@ -60,6 +62,8 @@ def password_change():
         current_user.password = generate_password_hash(new_password)
         current_user.force_password_change = False
         db.session.commit()
+        
+        current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) changed password from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
         
         flash("Password was changed!", "success")
         return redirect(url_for("auth.logout"))

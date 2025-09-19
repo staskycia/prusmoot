@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, request
 
 from config import Config
+from configure_logging import configure_logging
 
 from app.extensions import db, login_manager, mail, admin, babel, get_locale
 
@@ -16,6 +17,11 @@ def create_app(config_class = Config):
     app = Flask(__name__)
     #
     
+    @app.before_request
+    def log_visit():
+        if request.endpoint != "static":
+            app.logger.info(f"{".".join(request.remote_addr.split(".")[:3] + ["*"])} visited {request.endpoint}")
+    
     app.config.from_object(config_class)
     
     db.init_app(app)
@@ -27,6 +33,8 @@ def create_app(config_class = Config):
     init_admin_views()
     
     babel.init_app(app, locale_selector=get_locale)
+    
+    configure_logging(app)
     
     #time and date constructors
     app.jinja_env.globals['time'] = time

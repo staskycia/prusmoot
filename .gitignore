@@ -10,3 +10,4 @@ lipsum.txt
 venv
 .env
 app/uploaded_files
+logs

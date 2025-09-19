@@ -35,6 +35,8 @@ def home():
             db.session.commit()
             links = Link.query.all()
             flash("Link added!", "success")
+            
+            current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) created a link from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
         elif field == "delete":
             alias = request.form.get("alias")
             if not alias:
@@ -44,6 +46,8 @@ def home():
                 if not link:
                     flash("Link not found!", "error")
                 else:
+                    current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) deleted a link from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
+                    
                     db.session.delete(link)
                     db.session.commit()
                     flash("Link deleted!", "success")
@@ -98,6 +102,8 @@ def posts():
         db.session.commit()
         
         flash("Post publushed!", "success")
+        
+        current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) published a post from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
     
     posts = Post.query.order_by(Post.created_at.desc()).all()        
     return render_template("panel/posts.html", tags=tags, posts=posts)
@@ -134,6 +140,9 @@ def edit_post(id):
         db.session.commit()
 
         flash("Changes published!", "success")
+        
+        current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) edited a post from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
+        
         return redirect(url_for("panel.posts"))
     
     return render_template("panel/edit_post.html", post=post, tags=tags)
@@ -151,6 +160,8 @@ def delete_post():
             db.session.commit()
             
             flash("Post deleted!", "success")
+            
+            current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) deleted a post from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
     
     return redirect(url_for("panel.posts"))
 
@@ -166,6 +177,8 @@ def tags():
             db.session.add(tag)
             db.session.commit()
             flash("Tag added!", "success")
+            
+            current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) created a tag from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
         else:
             flash("All fields are required!", "error")
             
@@ -185,6 +198,8 @@ def delete_tag():
             db.session.commit()
             
             flash("Tag deleted!", "success")
+            
+            current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) deleted a tag from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
     
     return redirect(url_for("panel.tags"))
 
@@ -237,6 +252,8 @@ def files():
         
         flash("File uploaded!", "success")
         
+        current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) uploaded a file from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
+        
     files = File.query.all()
     return render_template("panel/files.html", categories=categories, files=files)
 
@@ -261,6 +278,8 @@ def delete_file():
             db.session.commit()
             
             flash("File deleted!", "success")
+            
+            current_app.logger.info(f"{current_user.first_name} {current_user.last_name} ({current_user.id}) deleted a file from {".".join(request.remote_addr.split(".")[:3] + ["*"])}")
     
     return redirect(url_for("panel.files"))
 
