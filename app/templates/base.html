@@ -188,6 +188,41 @@
     {% endif %}
 
   </div>
+  <div
+    id="cookie-widget"
+    class="fixed max-w-md p-4 mx-auto bg-pruslight left-12 bottom-12 rounded-2xl hidden 
+          max-md:left-1/2 max-md:bottom-20 max-md:-translate-x-1/2 max-md:w-[90%] max-md:max-w-full"
+    >
+    <h2 class="text-2xl font-heading">{{_('We use cookies')}}</h2>
+    <p class="my-5">
+      {{_("We need cookies to organize the competition. Turns out you can't host a site without them either — but don’t worry, we only use mandatory cookies.")}}
+    </p>
+    <div class="flex justify-left flex-row-reverse w-full">
+      <button
+        id="cookie-accept"
+        class="px-4 py-2 bg-prusdark hover:bg-prusdark-400 active:bg-prusdark-500 text-white duration-300 rounded-full"
+      >
+        {{_('Accept')}}
+      </button>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    const widget = document.getElementById("cookie-widget");
+    const btn = document.getElementById("cookie-accept");
+
+    // Check if user has already accepted
+    if (!localStorage.getItem("cookiesAccepted")) {
+      widget.classList.remove("hidden");
+    }
+
+    btn.addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      widget.classList.add("hidden");
+    });
+  })();
+  </script>
   </body>
   <style>
     .glass {

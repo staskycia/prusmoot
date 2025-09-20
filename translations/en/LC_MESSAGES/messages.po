@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-19 23:00+0200\n"
+"POT-Creation-Date: 2025-09-20 11:13+0200\n"
 "PO-Revision-Date: 2025-09-07 00:18+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -116,6 +116,21 @@ msgstr ""
 
 #: app/templates/base.html:123
 msgid "Moot&nbsp;Guide"
+msgstr ""
+
+#: app/templates/base.html:196
+msgid "We use cookies"
+msgstr ""
+
+#: app/templates/base.html:198
+msgid ""
+"We need cookies to organize the competition. Turns out you can't host a "
+"site without them either — but don’t worry, we only use mandatory "
+"cookies."
+msgstr ""
+
+#: app/templates/base.html:205
+msgid "Accept"
 msgstr ""
 
 #: app/templates/files.html:67
@@ -519,26 +534,26 @@ msgstr ""
 msgid "A"
 msgstr ""
 
-#: app/templates/home.html:36
+#: app/templates/home.html:44
 msgid "law"
 msgstr ""
 
-#: app/templates/home.html:39
+#: app/templates/home.html:48
 msgid "competition"
 msgstr ""
 
-#: app/templates/home.html:45
+#: app/templates/home.html:55
 msgid ""
 "for ambitious students with a passion for debate and public speaking, "
 "PrusMoot offers a unique opportunity to step into the shoes of legal "
 "advocates and explore the complexities of international law."
 msgstr ""
 
-#: app/templates/home.html:52
+#: app/templates/home.html:62
 msgid "Register now"
 msgstr ""
 
-#: app/templates/home.html:57
+#: app/templates/home.html:67
 msgid "Learn more"
 msgstr ""
 
@@ -792,5 +807,12 @@ msgstr ""
 #~ " unique opportunity to step into the"
 #~ " shoes of legal advocates and explore"
 #~ " the complexities of international law."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We need cookies to organize the "
+#~ "competition. Turns auto you can't host"
+#~ " a site without them either, though"
+#~ " we use mandatory cookies only."
 #~ msgstr ""
 
