@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-20 11:13+0200\n"
+"POT-Creation-Date: 2025-10-15 20:26+0200\n"
 "PO-Revision-Date: 2025-09-07 00:18+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -600,7 +600,7 @@ msgstr ""
 msgid "Venue"
 msgstr ""
 
-#: app/templates/editions/2024.html:18 app/templates/editions/2025.html:18
+#: app/templates/editions/2024.html:18
 msgid "CMS law firm office in Varso Tower"
 msgstr ""
 
@@ -680,6 +680,10 @@ msgstr ""
 #: app/templates/editions/2024.html:133
 msgid "here"
 msgstr ""
+
+#: app/templates/editions/2025.html:18
+msgid "Biuro Rzecznika Finansowego, ul. Nowogrodzka 47a"
+msgstr "Office of the Financial Ombudsman, 47a Nowogrodzka Street"
 
 #: app/templates/editions/2025.html:87
 msgid "We are thrilled to announce that"
