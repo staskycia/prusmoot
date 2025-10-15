@@ -1038,6 +1038,10 @@ video {
   width: 30%;
 }
 
+.w-\[25\%\]{
+  width: 25%;
+}
+
 .min-w-\[150px\]{
   min-width: 150px;
 }
