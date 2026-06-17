@@ -26,7 +26,7 @@ with app.app_context():
 
     existing = User.query.filter_by(email=admin_email).first()
     if existing is None:
-        admin = User(email=admin_email, first_name="Staś", last_name="Kycia", password=admin_password, is_admin=True)
+        admin = User(email=admin_email, first_name="Staś", last_name="Kycia", password=generate_password_hash(admin_password), is_admin=True)
         db.session.add(admin)
         db.session.commit()
     else:
