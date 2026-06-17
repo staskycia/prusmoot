@@ -17,11 +17,17 @@ from app.extensions import db
 from app.models import User, Post
 
 from werkzeug.security import generate_password_hash
-admin = User(email = "stanislaw.stask@gmail.com", first_name="Staś", last_name="Kycia", password=generate_password_hash("admin"), is_admin=True)
+
+admin_email = input("Admin email: ")
+admin_password = input("Admin password: ")
 
 with app.app_context():
     db.create_all()
-    
-    db.session.add(admin)
-    
-    db.session.commit()
+
+    existing = User.query.filter_by(email=admin_email).first()
+    if existing is None:
+        admin = User(email=admin_email, first_name="Staś", last_name="Kycia", password=admin_password, is_admin=True)
+        db.session.add(admin)
+        db.session.commit()
+    else:
+        print(f"Admin user already exists: {existing.email}")

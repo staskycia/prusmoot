@@ -12,4 +12,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "app.db")
     UPLOAD_FOLDER = "uploaded_files"
     SQLALCHEMY_TRACK_MODIFICATIONS = os.getenv("SQLALCHEMY_TRACK_MODIFICATIONS", "False").lower() == "true"
-    BABEL_TRANSLATION_DIRECTORIES = os.getenv("BABEL_TRANSLATION_DIRECTORIES")
+    BABEL_TRANSLATION_DIRECTORIES = os.getenv(
+        "BABEL_TRANSLATION_DIRECTORIES",
+        os.path.join(basedir, "translations")
+    )
